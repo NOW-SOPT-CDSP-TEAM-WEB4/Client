@@ -1,0 +1,10 @@
+{
+    "extends": ["stylelint-config-recommended"],
+    "customSyntax": "postcss-styled-syntax",
+    "plugins": ["stylelint-order"],
+    "rules": {
+        "order/properties-alphabetical-order": true,
+        "color-named": "never",
+        "no-extra-semicolons": true
+    }
+}
