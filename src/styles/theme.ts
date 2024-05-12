@@ -24,11 +24,11 @@ const colors = {
   gg01: "#00CD80",
   gg02: "#01BA61",
 
-  b01: "#EDFBFB",
-  b02: "#E7F3FF",
-  b03: "#1ECAD3",
-  b04: "#05BCC6",
-  b05: "#1289F6",
+  bb01: "#EDFBFB",
+  bb02: "#E7F3FF",
+  bb03: "#1ECAD3",
+  bb04: "#05BCC6",
+  bb05: "#1289F6",
 };
 
 const theme = {
