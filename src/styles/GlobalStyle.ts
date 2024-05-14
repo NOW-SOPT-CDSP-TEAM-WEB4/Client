@@ -132,9 +132,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
-    width: 0;
+    /* width: 0;
     height: 0;
-    padding: 0;
+    padding: 0; */
     border: none;
 
     background-color: transparent;
