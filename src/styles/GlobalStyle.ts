@@ -89,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
+
     font-size: 62.5%;
     /* font: inherit; */
     vertical-align: baseline;
@@ -131,10 +132,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
-    border: none;
-    width: 0;
+    /* width: 0;
     height: 0;
-    padding: 0;
+    padding: 0; */
+    border: none;
+
     background-color: transparent;
     }
 
