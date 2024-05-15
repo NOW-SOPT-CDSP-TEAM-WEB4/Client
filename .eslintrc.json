@@ -53,8 +53,7 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "newlines-between": "always",
-        "warnOnDefaultImport": false
+        "newlines-between": "always"
       }
     ]
   }
