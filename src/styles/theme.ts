@@ -31,6 +31,8 @@ const colors = {
   bb03: "#1ECAD3",
   bb04: "#05BCC6",
   bb05: "#1289F6",
+
+  chips_hover: "#F7F9F9",
 };
 
 const fonts = {
