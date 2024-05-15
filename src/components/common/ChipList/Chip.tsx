@@ -2,11 +2,7 @@ import { styled } from "styled-components";
 
 import { IcCheckWhite } from "../../../assets";
 
-interface ChipWrapperProps {
-  buttonText: string;
-  selectedOption: string;
-  changeSelectedOption: () => void;
-}
+import { ChipWrapperProps } from "./types/chipsListType";
 
 function Chip({ buttonText, selectedOption, changeSelectedOption }: ChipWrapperProps) {
   return (

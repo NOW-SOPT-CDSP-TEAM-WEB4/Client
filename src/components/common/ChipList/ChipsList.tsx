@@ -5,10 +5,7 @@ import { styled } from "styled-components";
 import { IcNextButton } from "../../../assets";
 
 import Chip from "./Chip";
-
-interface ChipsListProps {
-  chipsTextList: string[];
-}
+import { ChipsListProps } from "./types/chipsListType";
 
 function ChipsList({ chipsTextList }: ChipsListProps) {
   const [selectedOption, setSelectedOption] = useState("전체");
