@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { IcTopBar, IcSym, IcLogoSim, IcLoud } from "../../assets/index";
+import { IcTopBar, IcSym, IcLogoSim, IcLoud } from "../../../assets/index";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
         <IcTopBarIcon />
       </IcTopBarBackground>
       <BottomContainer>
-        <IcSimIcon />
+        <IcSymIcon />
         <IcLogoSimIcon />
         <IcLoudIcon />
       </BottomContainer>
@@ -43,10 +43,9 @@ const BottomContainer = styled.div`
   width: 100%;
   height: 3.7rem;
   flex-direction: row;
-  background-color: ${({ theme }) => theme.colors.g01};
 `;
 
-const IcSimIcon = styled(IcSym)`
+const IcSymIcon = styled(IcSym)`
   width: 100%;
 `;
 
