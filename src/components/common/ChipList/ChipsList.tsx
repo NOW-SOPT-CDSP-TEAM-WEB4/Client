@@ -27,6 +27,7 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
 
   const scrollToRight = () => {
     const lastChild = chipsListBoxRef.current?.lastElementChild;
+
     if (lastChild) {
       lastChild.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
