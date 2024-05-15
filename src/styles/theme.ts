@@ -31,212 +31,214 @@ const colors = {
   bb03: "#1ECAD3",
   bb04: "#05BCC6",
   bb05: "#1289F6",
+
+  chips_hover: "#F7F9F9",
 };
 
 const fonts = {
   Bold40_56: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 4rem;
     line-height: 5.6rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold32_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 3.2rem;
     line-height: auto;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold28_36: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 2.8rem;
     line-height: 3.6rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold24_32: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.2rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold20_28: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 2rem;
     line-height: 2.8rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold18_26: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Regular18_26: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Bold16_24: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   SemiBold16_24: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   Regular16_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: auto;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Bold15_24: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.4rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold15_18: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   SemiBold15_24: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 2.4rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   SemiBold15_18: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   Regular15_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: auto;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Regular15_24: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.4rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Bold14_22: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   SemiBold14_22: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   Medium14_22: css`
-    font-family: "Pretendard";
+    font-weight: 500;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    font-weight: 500;
+    font-family: "Pretendard", serif;
   `,
   Regular14_22: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   SemiBold14_17: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.7rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   Medium14_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 500;
     font-size: 1.4rem;
     line-height: auto;
-    font-weight: 500;
+    font-family: "Pretendard", serif;
   `,
   Bold13_16: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   SemiBold13_22: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.3rem;
     line-height: 2.2rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   SemiBold13_20: css`
-    font-family: "Pretendard";
+    font-weight: 600;
     font-size: 1.3rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-family: "Pretendard", serif;
   `,
   Medium13_20: css`
-    font-family: "Pretendard";
+    font-weight: 500;
     font-size: 1.3rem;
     line-height: 2rem;
-    font-weight: 500;
+    font-family: "Pretendard", serif;
   `,
   Regular13_20: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.3rem;
     line-height: 2rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Medium13_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 500;
     font-size: 1.3rem;
     line-height: auto;
-    font-weight: 500;
+    font-family: "Pretendard", serif;
   `,
   Regular13_16: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Regular13_Auto: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.3rem;
     line-height: auto;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Bold12_16: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Bold11_13: css`
-    font-family: "Pretendard";
+    font-weight: 700;
     font-size: 1.1rem;
     line-height: 1.3rem;
-    font-weight: 700;
+    font-family: "Pretendard", serif;
   `,
   Regular11_13: css`
-    font-family: "Pretendard";
+    font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.3rem;
-    font-weight: 400;
+    font-family: "Pretendard", serif;
   `,
   Button: css`
-    font-family: "Pretendard";
+    font-weight: 800;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    font-weight: 800;
+    font-family: "Pretendard", serif;
   `,
 };
 
