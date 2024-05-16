@@ -112,7 +112,7 @@ const fonts = {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2.4rem;
-    font-family: "Pretendard", serif;
+    font-family: "Pretendard";
   `,
   SemiBold15_18: css`
     font-weight: 600;
@@ -172,7 +172,7 @@ const fonts = {
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    font-family: "Pretendard", serif;
+    font-family: "Pretendard";
   `,
   SemiBold13_22: css`
     font-weight: 600;

@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 import { styled } from "styled-components";
 
 import { Logo, IcSearch, IcNew } from "../../../assets/";
@@ -70,7 +68,7 @@ const IcNewIcon = styled(IcNew)`
 
   padding-left: 0.2rem;
 
-  /* 여기 fill도 안 먹힘 */
+  /* 여기 fill도 안 먹힘... 엉엉쇼 */
   fill: ${({ theme }) => theme.colors.bb04};
 `;
 
@@ -86,7 +84,7 @@ const NavBtn = styled.button`
   padding: 0rem 1rem;
   align-items: flex-start;
 
-  font: ${({ theme }) => theme.fonts.SemiBold15_24};
+  ${({ theme }) => theme.fonts.SemiBold15_24};
 `;
 
 const RightContainer = styled.section`
@@ -127,6 +125,8 @@ const SearchBarInput = styled.input`
   border: none;
 
   background-color: ${({ theme }) => theme.colors.chips_hover};
+
+  outline: none;
 `;
 
 const LoginContainer = styled.section`
@@ -138,6 +138,8 @@ const LoginContainer = styled.section`
 
 const LoginBtn = styled.button`
   text-align: center;
+
+  ${({ theme }) => theme.fonts.Regular13_20};
 
   &:hover {
     color: ${({ theme }) => theme.colors.bb04};
@@ -155,6 +157,8 @@ const SignupBtn = styled.button`
   border-radius: 1.9rem;
 
   background: ${({ theme }) => theme.colors.b05};
+
+  ${({ theme }) => theme.fonts.Bold13_16};
 
   color: ${({ theme }) => theme.colors.w01};
 `;
