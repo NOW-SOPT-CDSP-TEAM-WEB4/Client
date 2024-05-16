@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 import { Logo, IcSearch, IcNew } from "../../../assets/";
 
 function TopNav() {
-  // const [divider, setDivider] = useState(0);
-
   return (
     <TopNavWrapper>
       <LeftContainer>
