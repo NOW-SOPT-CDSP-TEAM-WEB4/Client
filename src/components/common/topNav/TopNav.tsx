@@ -1,16 +1,25 @@
+import React from "react";
+
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 import { Logo, IcSearch, IcNew } from "../../../assets/";
 
 function TopNav() {
+  const navigate = useNavigate();
+
   return (
     <TopNavWrapper>
       <LeftContainer>
         <LogoIcon />
         <BtnContainer>
-          <NavBtn type="button">발견</NavBtn>
-          <NavBtn type="button">채용</NavBtn>
-          <NavBtn type="button">
+          <NavBtn type="button" onClick={() => navigate("/community")}>
+            발견
+          </NavBtn>
+          <NavBtn type="button" onClick={() => navigate("/recruit")}>
+            채용
+          </NavBtn>
+          <NavBtn type="button" onClick={() => navigate("/search")}>
             성장/커뮤니티
             <IcNewIcon />
           </NavBtn>
