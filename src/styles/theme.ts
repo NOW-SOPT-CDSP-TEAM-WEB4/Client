@@ -18,6 +18,7 @@ const colors = {
   g03: "#E4E8E8",
   g04: "#DFDFDF",
   g05: "#E1E1E1",
+  g06: "#E5E5E5",
 
   o01: "#FFF5DA",
   o02: "#FF7900",

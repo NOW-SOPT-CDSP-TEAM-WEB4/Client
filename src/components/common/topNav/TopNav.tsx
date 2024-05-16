@@ -44,9 +44,9 @@ const TopNavWrapper = styled.section`
   width: 100%;
   height: 5.6rem;
   padding: 0rem 2.4rem 0rem 2.27rem;
-  /* border 안 먹힘... 왜지? */
-  border-bottom: 0.1rem;
-  border-color: black;
+
+  border-bottom: 0.1rem solid;
+  border-color: ${({ theme }) => theme.colors.g06};
 `;
 
 const LeftContainer = styled.section`
@@ -68,7 +68,6 @@ const IcNewIcon = styled(IcNew)`
 
   padding-left: 0.2rem;
 
-  /* 여기 fill도 안 먹힘... 엉엉쇼 */
   fill: ${({ theme }) => theme.colors.bb04};
 `;
 
