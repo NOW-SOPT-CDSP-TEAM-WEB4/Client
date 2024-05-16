@@ -1,25 +1,25 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import TopNav from "./components/common/topNav/TopNav";
+import Community from "./pages/Community/Community";
+import Home from "./pages/Home/Home";
+import Recruit from "./pages/Recruit/Recruit";
+import Search from "./pages/Search/Search";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <TopNav />,
-    children: [
-      //   {
-      //     path: "/1",
-      //     element: <Page1 />,
-      //   },
-      //   {
-      //     path: "/2",
-      //     element: <Page2 />,
-      //   },
-      //   {
-      //     path: "/3",
-      //     element: <Page3 />,
-      //   },
-      //   ...
-    ],
+    element: <Home />,
+  },
+  {
+    path: "/community",
+    element: <Community />,
+  },
+  {
+    path: "/recruit",
+    element: <Recruit />,
+  },
+  {
+    path: "/search",
+    element: <Search />,
   },
 ]);

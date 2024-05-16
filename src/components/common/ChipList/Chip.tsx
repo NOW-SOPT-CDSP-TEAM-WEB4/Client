@@ -32,4 +32,8 @@ const ChipWrapper = styled.button<{ isSelected: boolean }>`
   color: ${({ theme, isSelected }) => isSelected && theme.colors.w01};
 
   ${({ theme }) => theme.fonts.SemiBold14_22};
+
+  &:hover {
+    background-color: ${({ theme, isSelected }) => !isSelected && theme.colors.chips_hover};
+  }
 `;
