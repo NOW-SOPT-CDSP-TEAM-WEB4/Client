@@ -84,6 +84,10 @@ const NavBtn = styled.button`
   align-items: flex-start;
 
   ${({ theme }) => theme.fonts.SemiBold15_24};
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 const RightContainer = styled.section`
