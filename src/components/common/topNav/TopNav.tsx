@@ -35,6 +35,8 @@ export default TopNav;
 
 const TopNavWrapper = styled.section`
   display: flex;
+  position: sticky;
+  top: 4.2rem;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
