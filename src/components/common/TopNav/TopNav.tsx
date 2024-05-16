@@ -1,9 +1,9 @@
-import React, { useState, KeyboardEvent } from "react";
+import React, { KeyboardEvent, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { Logo, IcSearch, IcNew } from "../../../assets/";
+import { IcNew, IcSearch, Logo } from "../../../assets/";
 
 function TopNav() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,7 +23,9 @@ function TopNav() {
   return (
     <TopNavWrapper>
       <LeftContainer>
-        <LogoIcon />
+        <HomeBtn onClick={() => navigate("/")}>
+          <Logo />
+        </HomeBtn>
         <BtnContainer>
           <NavBtn type="button" onClick={() => navigate("/community")}>
             발견
@@ -59,20 +61,28 @@ function TopNav() {
 
 export default TopNav;
 
+const HomeBtn = styled.button`
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
 const TopNavWrapper = styled.section`
   display: flex;
   position: sticky;
-  top: 4.2rem;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
 
   width: 100%;
   height: 5.6rem;
-  padding: 0rem 2.4rem 0rem 2.27rem;
+  padding: 0 2.4rem 0 2.27rem;
 
   border-bottom: 0.1rem solid;
   border-color: ${({ theme }) => theme.colors.g06};
+
+  background-color: ${({ theme }) => theme.colors.w01};
 `;
 
 const LeftContainer = styled.section`
@@ -80,13 +90,7 @@ const LeftContainer = styled.section`
   height: 56px;
   align-items: center;
 
-  padding: 1.3rem 0rem;
-`;
-
-const LogoIcon = styled(Logo)`
-  &:hover {
-    opacity: 0.8;
-  }
+  padding: 1.3rem 0;
 `;
 
 const IcNewIcon = styled(IcNew)`
@@ -106,7 +110,7 @@ const BtnContainer = styled.section`
 
 const NavBtn = styled.button`
   display: flex;
-  padding: 0rem 1rem;
+  padding: 0 1rem;
   align-items: flex-start;
 
   ${({ theme }) => theme.fonts.SemiBold15_24};
@@ -122,40 +126,39 @@ const RightContainer = styled.section`
   align-items: center;
 
   height: 5.6rem;
-  padding: 0.9rem 0rem;
+  padding: 0.9rem 0;
 `;
 
 const SearchBar = styled.section`
   display: flex;
   width: 27.7rem;
-
   margin: 1.6rem;
   padding: 0.55rem 1.3rem 0.55rem 1.2rem;
+  border: 0.1rem solid;
 
   background-color: ${({ theme }) => theme.colors.chips_hover};
-
-  border: 0.1rem solid;
   border-color: ${({ theme }) => theme.colors.g05};
   border-radius: 1.9rem;
 `;
 
 const IcSearchIcon = styled(IcSearch)`
   display: absolute;
+  left: 1.2rem;
 
   margin-right: 1.1rem;
-  left: 1.2rem;
 `;
 
 const SearchBarInput = styled.input`
   display: flex;
   align-items: flex-start;
 
-  padding: 0.3rem 0.2rem 0.4rem 0.2rem;
+  width: 100%;
+  padding-top: 0.35rem;
   border: none;
 
   background-color: ${({ theme }) => theme.colors.chips_hover};
 
-  ${({ theme }) => theme.fonts.regular13_Auto};
+  ${({ theme }) => theme.fonts.Regular13_Auto};
 
   outline: none;
 `;
@@ -181,9 +184,9 @@ const SignupBtn = styled.button`
   display: flex;
   align-items: flex-start;
 
-  margin: 0rem 0.5rem 0rem 1.4rem;
-  padding: 1.05rem 1.6rem 1.15rem 1.6rem;
   height: 3.8rem;
+  margin: 0 0.5rem 0 1.4rem;
+  padding: 1.05rem 1.6rem 1.15rem 1.6rem;
 
   border-radius: 1.9rem;
 
