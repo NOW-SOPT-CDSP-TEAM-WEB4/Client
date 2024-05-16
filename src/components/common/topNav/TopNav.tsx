@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, KeyboardEvent } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
@@ -6,7 +6,19 @@ import { styled } from "styled-components";
 import { Logo, IcSearch, IcNew } from "../../../assets/";
 
 function TopNav() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const navigate = useNavigate();
+
+  const saveSearchQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const activeEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      navigate(`/search?keyword=${searchQuery}`);
+    }
+  };
 
   return (
     <TopNavWrapper>
@@ -29,7 +41,12 @@ function TopNav() {
       <RightContainer>
         <SearchBar>
           <IcSearchIcon />
-          <SearchBarInput></SearchBarInput>
+          <SearchBarInput
+            placeholder="190,000개 이상의 크리에이티브 검색"
+            value={searchQuery}
+            onChange={saveSearchQuery}
+            onKeyDown={(e) => activeEnter(e)}
+          />
         </SearchBar>
         <LoginContainer>
           <LoginBtn type="button">로그인</LoginBtn>
@@ -137,6 +154,8 @@ const SearchBarInput = styled.input`
   border: none;
 
   background-color: ${({ theme }) => theme.colors.chips_hover};
+
+  ${({ theme }) => theme.fonts.regular13_Auto};
 
   outline: none;
 `;
