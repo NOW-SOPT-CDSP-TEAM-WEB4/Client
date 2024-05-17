@@ -1,5 +1,7 @@
+import CommunitySidebar from "../../components/Community/CommunitySidebar";
+
 function Community() {
-  return <div>Community</div>;
+  return <CommunitySidebar></CommunitySidebar>;
 }
 
 export default Community;
