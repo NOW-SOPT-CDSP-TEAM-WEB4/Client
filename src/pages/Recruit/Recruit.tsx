@@ -21,5 +21,5 @@ const RecruitWrapper = styled.div`
 `;
 
 const RecruitBodyWrapper = styled.main`
-  padding: 0 3.2rem;
+  padding: 0 calc((100vw - 130.2rem) / 2);
 `;
