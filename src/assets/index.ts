@@ -5,6 +5,7 @@ import IcCsFour from "./svg/ic_cs_four.svg?react";
 import IcCsOne from "./svg/ic_cs_one.svg?react";
 import IcCsThree from "./svg/ic_cs_three.svg?react";
 import IcCsTwo from "./svg/ic_cs_two.svg?react";
+import IcFrame from "./svg/ic_frame.svg?react";
 import IcLogoSim from "./svg/ic_logo_sim.svg?react";
 import IcLoud from "./svg/ic_loud.svg?react";
 import IcNextButton from "./svg/ic_next_button.svg?react";
@@ -30,4 +31,5 @@ export {
   IcCsFour,
   IcCheckLeft,
   IcCheckRight,
+  IcFrame,
 };
