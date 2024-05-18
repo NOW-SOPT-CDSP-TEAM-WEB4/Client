@@ -1,13 +1,13 @@
 import { styled } from "styled-components";
 
-import BestFolio from "../../components/Home/BestFolio";
+import BestFolioContainer from "../../components/Home/BestFolioContainer";
 import CarouselContainer from "../../components/Home/CarouselContainer";
 
 function Home() {
   return (
     <HomeWrapper>
       <CarouselContainer />
-      <BestFolio />
+      <BestFolioContainer />
     </HomeWrapper>
   );
 }

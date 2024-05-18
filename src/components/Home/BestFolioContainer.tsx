@@ -1,18 +1,18 @@
 import { styled } from "styled-components";
 
-function BestFolio() {
+function BestFolioContainer() {
   return (
-    <BestFolioContainer>
+    <BestFolioContainerWrapper>
       <ChipContainer>
         <ChipContainerTitle />
       </ChipContainer>
-    </BestFolioContainer>
+    </BestFolioContainerWrapper>
   );
 }
 
-export default BestFolio;
+export default BestFolioContainer;
 
-const BestFolioContainer = styled.section`
+const BestFolioContainerWrapper = styled.section`
   display: flex;
 `;
 
