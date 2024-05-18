@@ -1,3 +1,5 @@
+import IcCheckLeft from "./svg/ic_check_left.svg?react";
+import IcCheckRight from "./svg/ic_check_right.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
 import IcCsFour from "./svg/ic_cs_four.svg?react";
 import IcCsOne from "./svg/ic_cs_one.svg?react";
@@ -26,4 +28,6 @@ export {
   IcCsTwo,
   IcCsThree,
   IcCsFour,
+  IcCheckLeft,
+  IcCheckRight,
 };
