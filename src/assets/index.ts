@@ -11,6 +11,7 @@ import IcLoud from "./svg/ic_loud.svg?react";
 import IcNextButton from "./svg/ic_next_button.svg?react";
 import IcSym from "./svg/ic_sym.svg?react";
 import IcTopBar from "./svg/ic_top_bar.svg?react";
+import IcArrowdownSm from "./svg/icons_arrowdown_sm.svg?react";
 import IcNew from "./svg/icons_New.svg?react";
 import IcSearch from "./svg/icons_Search.svg?react";
 import Logo from "./svg/logo.svg?react";
@@ -25,6 +26,7 @@ export {
   IcTopBar,
   IcSearch,
   IcNew,
+  IcArrowdownSm,
   ImgCommuity,
   ImgContents,
   ImgDesign,

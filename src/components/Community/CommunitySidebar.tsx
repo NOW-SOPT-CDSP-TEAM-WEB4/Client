@@ -2,15 +2,26 @@ import { useState } from "react";
 
 import { styled } from "styled-components";
 
-import { ImgHouse, ImgWorkshop, ImgProject, ImgCommuity, ImgContents, ImgDesign, ImgOpen } from "../../assets";
+import {
+  ImgHouse,
+  ImgWorkshop,
+  ImgProject,
+  ImgCommuity,
+  ImgContents,
+  ImgDesign,
+  ImgOpen,
+  IcArrowdownSm,
+} from "../../assets";
+
+import Dropdown from "./Dropdown";
 
 function CommunitySidebar() {
   const navCategory = [
-    { content: "홈", element: <ImgHouse /> },
-    { content: "워크숍&세미나", element: <ImgWorkshop /> },
-    { content: "프로젝트&챌린지", element: <ImgProject /> },
-    { content: "커뮤니티", element: <ImgCommuity /> },
-    { content: "콘텐츠", element: <ImgContents /> },
+    { content: "홈", element: <ImgHouse />, dropdown: false },
+    { content: "워크숍&세미나", element: <ImgWorkshop />, dropdown: false },
+    { content: "프로젝트&챌린지", element: <ImgProject />, dropdown: false },
+    { content: "커뮤니티", element: <ImgCommuity />, dropdown: true },
+    { content: "콘텐츠", element: <ImgContents />, dropdown: false },
   ];
 
   const outLinkCategory = [
@@ -18,30 +29,63 @@ function CommunitySidebar() {
     { content: "디자이너 오픈 채팅방", element: <ImgOpen /> },
   ];
 
-  const [btnActive, setBtnActive] = useState(0);
+  const commuityCategory = [
+    "전체",
+    "자유주제",
+    "포트폴리오",
+    "취업/이직/커리어",
+    "사이드 프로젝트/스터디",
+    "내 생존 유형은?",
+  ];
 
-  const toggleActive = (e: number) => {
+  const [btnActive, setBtnActive] = useState(0);
+  const [toggleOpen, setToggleOpen] = useState(false);
+
+  const navBtnActive = (e: number) => {
     setBtnActive(e);
+  };
+
+  const toggleBtnActive = () => {
+    setToggleOpen(!toggleOpen);
   };
 
   return (
     <CommunutySidebarWrapper>
-      <SidebarBtnContainer>
-        {navCategory.map((item, idx) => {
-          return (
+      <SidebarContainer>
+        {navCategory.map((item, idx) => (
+          <SidebarBtnContainer key={item.content}>
             <SidebarBtn
               type="button"
               key={item.content}
               value={idx}
               className={"btn" + (idx == btnActive ? " active" : "")}
               // 현재는 홈에 바탕색 고정. 클릭마다 바탕색 이벤트를 주고 싶을 경우 0 >> idx로 변경
-              onClick={() => toggleActive(0)}>
+              onClick={() => {
+                navBtnActive(0);
+                {
+                  item.dropdown === true ? toggleBtnActive() : null;
+                }
+              }}>
               <NavImg>{item.element}</NavImg>
               {item.content}
+              {item.dropdown === true ? (
+                <ToggleBtn type="button" className={"btn" + (toggleOpen == true ? " active" : "")} />
+              ) : null}
             </SidebarBtn>
-          );
-        })}
-      </SidebarBtnContainer>
+            {item.dropdown === true ? (
+              <Dropdown isOpen={toggleOpen}>
+                {commuityCategory.map((item) => {
+                  return (
+                    <DropdownBtn type="button" key={item}>
+                      {item}
+                    </DropdownBtn>
+                  );
+                })}
+              </Dropdown>
+            ) : null}
+          </SidebarBtnContainer>
+        ))}
+      </SidebarContainer>
       <OutLinkBtnContainer>
         {outLinkCategory.map((item) => {
           return (
@@ -68,13 +112,25 @@ const CommunutySidebarWrapper = styled.section`
   padding: 4.8rem 0.1rem 17.4rem 0;
 `;
 
+const SidebarContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+`;
+
 const SidebarBtnContainer = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
 `;
 
 const SidebarBtn = styled.button`
   display: flex;
+  position: relative;
   align-items: flex-start;
   align-self: stretch;
 
@@ -96,8 +152,34 @@ const NavImg = styled.div`
   margin-right: 1.2rem;
 `;
 
+const ToggleBtn = styled(IcArrowdownSm)`
+  position: absolute;
+
+  right: 0;
+  bottom: 1.9rem;
+
+  &.active {
+    transform: rotate(180deg);
+  }
+`;
+
+const DropdownBtn = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  margin: 0 1.6rem;
+  padding-left: 4.8rem;
+
+  ${({ theme }) => theme.fonts.Regular14_22};
+
+  gap: 1.6rem;
+`;
+
 const OutLinkBtnContainer = styled.section`
   display: flex;
+  position: static;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
@@ -116,7 +198,10 @@ const OutLinkBtn = styled.button`
 
   padding: 1.6rem 3rem 1.6rem 2rem;
 
+  border-radius: 0.8rem;
+
   ${({ theme }) => theme.fonts.SemiBold14_17};
+  background-color: ${({ theme }) => theme.colors.chips_hover};
 `;
 
 const OutLinkImg = styled.div`
