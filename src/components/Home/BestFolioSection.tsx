@@ -63,6 +63,10 @@ const IcFrameIcon = styled(IcFrame)`
   margin-left: 0.5692rem;
 `;
 
-const BestFolioItemContainer = styled.section`
+const BestFolioItemContainer = styled.article`
   display: flex;
+  column-gap: 11.38;
+
+  width: 100%;
+  margin-top: 2.1rem;
 `;

@@ -1,3 +1,8 @@
+import IcBfFive from "./svg/ic_bf_five.svg?react";
+import IcBfFour from "./svg/ic_bf_four.svg?react";
+import IcBfOne from "./svg/ic_bf_one.svg?react";
+import IcBfThree from "./svg/ic_bf_three.svg?react";
+import IcBfTwo from "./svg/ic_bf_two.svg?react";
 import IcCheckLeft from "./svg/ic_check_left.svg?react";
 import IcCheckRight from "./svg/ic_check_right.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
@@ -32,4 +37,9 @@ export {
   IcCheckLeft,
   IcCheckRight,
   IcFrame,
+  IcBfOne,
+  IcBfTwo,
+  IcBfThree,
+  IcBfFour,
+  IcBfFive,
 };
