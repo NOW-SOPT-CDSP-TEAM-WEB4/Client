@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import BestFolioSection from "../../components/Home/BestFolioSection";
+import BestFolioSection from "../../components/Home/BsetFolioSection/BestFolioSection";
 import CarouselContainer from "../../components/Home/CarouselContainer";
 
 function Home() {

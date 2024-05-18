@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 
-import { IcFrame } from "../../assets/index";
-import ChipsList from "../common/ChipList/ChipsList";
-import { chipsTextList } from "../common/ChipList/constantEx";
+import { IcFrame } from "../../../assets/index";
+import ChipsList from "../../common/ChipList/ChipsList";
+import { chipsTextList } from "../../common/ChipList/constantEx";
 
 function BestFolioSection() {
   return (
