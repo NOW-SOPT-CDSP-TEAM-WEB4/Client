@@ -1,13 +1,15 @@
 import { styled } from "styled-components";
 
-import BestFolioContainer from "../../components/Home/BestFolioContainer";
+import BestFolioSection from "../../components/Home/BestFolioSection";
 import CarouselContainer from "../../components/Home/CarouselContainer";
 
 function Home() {
   return (
     <HomeWrapper>
       <CarouselContainer />
-      <BestFolioContainer />
+      <HomeBodyWrapper>
+        <BestFolioSection />
+      </HomeBodyWrapper>
     </HomeWrapper>
   );
 }
@@ -16,4 +18,8 @@ export default Home;
 
 const HomeWrapper = styled.div`
   width: 100%;
+`;
+
+const HomeBodyWrapper = styled.main`
+  padding: 7.5rem 6rem 6rem 4.5rem;
 `;
