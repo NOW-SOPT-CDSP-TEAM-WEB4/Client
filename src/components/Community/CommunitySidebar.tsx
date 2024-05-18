@@ -110,6 +110,9 @@ const CommunutySidebarWrapper = styled.section`
   width: 24.2rem;
   height: 85.4rem;
   padding: 4.8rem 0.1rem 17.4rem 0;
+
+  border-right: 0.1rem solid;
+  border-color: ${({ theme }) => theme.colors.g02};
 `;
 
 const SidebarContainer = styled.section`
