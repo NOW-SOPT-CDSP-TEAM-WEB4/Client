@@ -16,7 +16,7 @@ const BestFolioSectionWrapper = styled.section`
 `;
 
 const BestFolioSectionTitle = styled.h2`
-  ${({ theme }) => theme.fonts.Bold20_28};
+  ${({ theme }) => theme.fonts.Bold28_36};
   color: ${({ theme }) => theme.colors.b03};
 `;
 
