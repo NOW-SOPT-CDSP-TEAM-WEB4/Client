@@ -7,6 +7,8 @@ export const bestfolioHomeList = [
     company: "모그 스튜디오",
     companyLogo: <IcMog />,
     viewLogo: <IcView />,
+    viewNum: "1",
+    heartNum: "1",
     greyHeartLogo: <IcGreyHeart />,
   },
   {
@@ -15,6 +17,8 @@ export const bestfolioHomeList = [
     company: "킨더가든",
     companyLogo: <IcKinder />,
     viewLogo: <IcView />,
+    viewNum: "1",
+    heartNum: "1",
     greyHeartLogo: <IcGreyHeart />,
   },
   {
@@ -23,6 +27,8 @@ export const bestfolioHomeList = [
     company: "몰리(Molly)",
     companyLogo: <IcMolly />,
     viewLogo: <IcView />,
+    viewNum: "1",
+    heartNum: "1",
     greyHeartLogo: <IcGreyHeart />,
   },
   {
@@ -31,6 +37,8 @@ export const bestfolioHomeList = [
     company: "스튜디오 디워크",
     companyLogo: <IcStudio />,
     viewLogo: <IcView />,
+    viewNum: "1",
+    heartNum: "1",
     greyHeartLogo: <IcGreyHeart />,
   },
   {
@@ -39,6 +47,8 @@ export const bestfolioHomeList = [
     company: "Floggy",
     companyLogo: <IcFloggy />,
     viewLogo: <IcView />,
+    viewNum: "1",
+    heartNum: "1",
     greyHeartLogo: <IcGreyHeart />,
   },
 ];

@@ -21,5 +21,5 @@ const HomeWrapper = styled.div`
 `;
 
 const HomeBodyWrapper = styled.main`
-  padding: 7.5rem 6rem 6rem 4.5rem;
+  padding: 0 calc((100vw - 124.4rem) / 2);
 `;
