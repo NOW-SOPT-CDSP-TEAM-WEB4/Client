@@ -74,27 +74,23 @@ function CommunitySidebar() {
             </SidebarBtn>
             {item.dropdown === true ? (
               <Dropdown isOpen={toggleOpen}>
-                {commuityCategory.map((item) => {
-                  return (
-                    <DropdownBtn type="button" key={item}>
-                      {item}
-                    </DropdownBtn>
-                  );
-                })}
+                {commuityCategory.map((item) => (
+                  <DropdownBtn type="button" key={item}>
+                    {item}
+                  </DropdownBtn>
+                ))}
               </Dropdown>
             ) : null}
           </SidebarBtnContainer>
         ))}
       </SidebarContainer>
       <OutLinkBtnContainer>
-        {outLinkCategory.map((item) => {
-          return (
-            <OutLinkBtn type="button" key={item.content}>
-              <OutLinkImg>{item.element}</OutLinkImg>
-              {item.content}
-            </OutLinkBtn>
-          );
-        })}
+        {outLinkCategory.map((item) => (
+          <OutLinkBtn type="button" key={item.content}>
+            <OutLinkImg>{item.element}</OutLinkImg>
+            {item.content}
+          </OutLinkBtn>
+        ))}
       </OutLinkBtnContainer>
     </CommunutySidebarWrapper>
   );
