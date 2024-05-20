@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import ActiveRecruitSection from "../../components/Recruit/ActiveRecruitSection/ActiveRecruitSection";
-import BannerContainer from "../../components/Recruit/BannerContainer/BannerContainer";
+import ActiveRecruitSection from "../../components/Recruit/ActiveRecruitSection";
+import BannerContainer from "../../components/Recruit/BannerContainer";
 
 function Recruit() {
   return (

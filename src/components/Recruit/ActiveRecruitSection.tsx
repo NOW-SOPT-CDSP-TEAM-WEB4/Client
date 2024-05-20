@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
-import { activeRecruitList } from "../../../constants/Recruit/recruitConstants";
-import ActiveRecruitItem from "../ActiveRecruitItem/ActiveRecruitItem";
+import { activeRecruitList } from "../../constants/Recruit/recruitConstants";
+
+import ActiveRecruitItem from "./ActiveRecruitItem";
 
 function ActiveRecruitSection() {
   return (

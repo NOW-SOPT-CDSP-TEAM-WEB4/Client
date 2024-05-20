@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { ImgRecruitBanner } from "../../../assets";
+import { ImgRecruitBanner } from "../../assets";
 
 function BannerContainer() {
   return (
