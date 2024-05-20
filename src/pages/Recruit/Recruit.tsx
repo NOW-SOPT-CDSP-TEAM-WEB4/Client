@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 import ActiveRecruitSection from "../../components/Recruit/ActiveRecruitSection";
 import BannerSection from "../../components/Recruit/BannerSection";
+import DesignerRecruitSection from "../../components/Recruit/DesignerRecruitSection";
 
 function Recruit() {
   return (
@@ -9,6 +10,7 @@ function Recruit() {
       <BannerSection />
       <RecruitBodyWrapper>
         <ActiveRecruitSection />
+        <DesignerRecruitSection />
       </RecruitBodyWrapper>
     </RecruitWrapper>
   );
