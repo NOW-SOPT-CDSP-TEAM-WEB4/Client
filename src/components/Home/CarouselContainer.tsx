@@ -13,11 +13,13 @@ interface CarouselImgContainerProps {
   transition: boolean;
 }
 
+const images = [IcCsOne, IcCsTwo, IcCsThree, IcCsFour];
+const totalImages = [...images, ...images, ...images];
+
 function CarouselContainer() {
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(-images.length * 550);
   const [transition, setTransition] = useState(true);
-  const imageCount = 4;
-  const imageWidth = 20;
+  const imageWidth = 550;
 
   const handleLeftClick = () => {
     setOffset((prevOffset) => prevOffset + imageWidth);
@@ -30,21 +32,21 @@ function CarouselContainer() {
   };
 
   const handleTransitionEnd = () => {
-    if (offset > 0) {
-      setOffset(-(imageWidth * (imageCount - 1)));
-    } else if (offset <= -imageWidth * (imageCount + 1)) {
-      setOffset(0);
+    if (offset >= 0) {
+      setOffset(-imageWidth * images.length);
+      setTransition(false);
+    } else if (offset <= -imageWidth * images.length * 2) {
+      setOffset(-imageWidth * images.length);
+      setTransition(false);
     }
-    setTransition(false);
   };
 
   return (
     <CarouselContainerWrapper>
       <CarouselImgContainer offset={offset} transition={transition} onTransitionEnd={handleTransitionEnd}>
-        <img src={IcCsFour} alt="Four" />
-        <img src={IcCsOne} alt="One" />
-        <img src={IcCsTwo} alt="Two" />
-        <img src={IcCsThree} alt="Three" />
+        {totalImages.map((src, index) => (
+          <img src={src} alt={`Slide ${index}`} key={index} />
+        ))}
       </CarouselImgContainer>
       <LeftButton onClick={handleLeftClick}>
         <IcLeftBtn />
@@ -60,16 +62,17 @@ export default CarouselContainer;
 
 const CarouselContainerWrapper = styled.section`
   display: flex;
+  overflow: hidden;
   position: relative;
-  margin-top: 4rem;
-  height: 30.3rem;
   width: 100vw;
+  height: 30.3rem;
+  margin-top: 4rem;
 `;
 
 const CarouselImgContainer = styled.section<CarouselImgContainerProps>`
   display: flex;
-  gap: 2.3rem;
-  transform: translateX(${(props) => props.offset}%);
+  /* gap: 2.3rem; */
+  transform: translateX(${(props) => props.offset}px);
   transition: ${(props) => (props.transition ? "transform 0.5s ease-in-out" : "none")};
 `;
 
