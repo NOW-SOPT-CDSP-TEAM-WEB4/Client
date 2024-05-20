@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { styled } from "styled-components";
 
@@ -7,19 +7,15 @@ import IcCsOne from "../../assets/img/img_carousel_1.png";
 import IcCsTwo from "../../assets/img/img_carousel_2.png";
 import IcCsThree from "../../assets/img/img_carousel_3.png";
 import IcCsFour from "../../assets/img/img_carousel_4.png";
-
-interface CarouselImgContainerProps {
-  offset: number;
-  transition: boolean;
-}
+import { CarouselImgContainerProps } from "../../types/Home/homeTypes";
 
 const images = [IcCsOne, IcCsTwo, IcCsThree, IcCsFour];
 const totalImages = [...images, ...images, ...images];
 
 function CarouselContainer() {
-  const [offset, setOffset] = useState(-images.length * 550);
+  const [offset, setOffset] = useState(-images.length * 573);
   const [transition, setTransition] = useState(true);
-  const imageWidth = 550;
+  const imageWidth = 573;
 
   const handleLeftClick = () => {
     setOffset((prevOffset) => prevOffset + imageWidth);
@@ -41,11 +37,20 @@ function CarouselContainer() {
     }
   };
 
+  useEffect(() => {
+    if (!transition) {
+      const id = setTimeout(() => {
+        setTransition(true);
+      }, 50);
+      return () => clearTimeout(id);
+    }
+  }, [transition]);
+
   return (
     <CarouselContainerWrapper>
       <CarouselImgContainer offset={offset} transition={transition} onTransitionEnd={handleTransitionEnd}>
         {totalImages.map((src, index) => (
-          <img src={src} alt={`Slide ${index}`} key={index} />
+          <CarouselImage src={src} alt={`Slide ${index}`} key={index} />
         ))}
       </CarouselImgContainer>
       <LeftButton onClick={handleLeftClick}>
@@ -71,9 +76,12 @@ const CarouselContainerWrapper = styled.section`
 
 const CarouselImgContainer = styled.section<CarouselImgContainerProps>`
   display: flex;
-  /* gap: 2.3rem; */
   transform: translateX(${(props) => props.offset}px);
   transition: ${(props) => (props.transition ? "transform 0.5s ease-in-out" : "none")};
+`;
+
+const CarouselImage = styled.img`
+  padding-right: 2.3rem;
 `;
 
 const LeftButton = styled.button`
