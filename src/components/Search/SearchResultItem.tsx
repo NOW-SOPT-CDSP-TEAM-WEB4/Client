@@ -1,11 +1,14 @@
 import { styled } from "styled-components";
 
-import { IcHeart, IcLogoAuthor1, IcView } from "../../assets";
+import { IcHeart, IcHeartFilled, IcHeartOutlined, IcLogoAuthor1, IcView } from "../../assets";
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
 
-function SearchResultItem({ name, view, heart }: SearchResultItemProps) {
+function SearchResultItem({ isHeart, name, view, heart }: SearchResultItemProps) {
+  const handleClickHeartButton = () => {};
+
   return (
     <SearchResultItemWrapper>
+      <HeartButton onClick={handleClickHeartButton}>{isHeart ? <IcHeartFilled /> : <IcHeartOutlined />}</HeartButton>
       <SearchResultItemImg src="/src/assets/img/img_search_result_1.png" />
       <SearchResultInfo>
         <AuthorInfo>
@@ -30,7 +33,16 @@ function SearchResultItem({ name, view, heart }: SearchResultItemProps) {
 export default SearchResultItem;
 
 const SearchResultItemWrapper = styled.div`
+  position: relative;
   width: 29.15rem;
+`;
+
+const HeartButton = styled.button`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+
+  padding: 0;
 `;
 
 const SearchResultItemImg = styled.img`
