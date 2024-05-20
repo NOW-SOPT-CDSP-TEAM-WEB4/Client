@@ -66,11 +66,13 @@ const HomeCompany = styled.h3`
 
 const HomeInfoContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const HomeView = styled.h3`
   color: ${({ theme }) => theme.colors.b05};
-  margin-right: 1.7rem;
+  margin-right: 1.8rem;
 `;
 
 const HomeHeart = styled.h3`
