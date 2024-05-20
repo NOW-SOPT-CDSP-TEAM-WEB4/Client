@@ -38,9 +38,7 @@ function CommunitySidebar() {
               }}>
               <NavImg>{item.element}</NavImg>
               {item.content}
-              {item.dropdown === true ? (
-                <ToggleBtn type="button" className={"btn" + (toggleOpen == true ? " active" : "")} />
-              ) : null}
+              {item.dropdown === true ? <ToggleBtn type="button" $toggleOpen={toggleOpen} /> : null}
             </SidebarBtn>
             {item.dropdown === true ? (
               <Dropdown isOpen={toggleOpen}>
@@ -121,15 +119,12 @@ const NavImg = styled.div`
   margin-right: 1.2rem;
 `;
 
-const ToggleBtn = styled(IcArrowdownSm)`
+const ToggleBtn = styled(IcArrowdownSm)<{ $toggleOpen: boolean }>`
   position: absolute;
 
   right: 0;
   bottom: 1.9rem;
-
-  &.active {
-    transform: rotate(180deg);
-  }
+  transform: ${({ $toggleOpen }) => $toggleOpen && "rotate(180deg)"};
 `;
 
 const DropdownBtn = styled.button`
