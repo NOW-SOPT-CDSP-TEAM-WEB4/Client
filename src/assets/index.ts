@@ -1,9 +1,13 @@
 import ImgCommuity from "./img/img_community.svg?react";
 import ImgContents from "./img/img_contents.svg?react";
 import ImgDesign from "./img/img_design.svg?react";
+import ImgFree from "./img/img_free.svg?react";
 import ImgHouse from "./img/img_house.svg?react";
 import ImgOpen from "./img/img_open.svg?react";
+import ImgPort from "./img/img_port.svg?react";
 import ImgProject from "./img/img_project.svg?react";
+import ImgSide from "./img/img_side.svg?react";
+import ImgWorkIm from "./img/img_work_im.svg?react";
 import ImgWorkshop from "./img/img_workshop.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
 import IcLogoSim from "./svg/ic_logo_sim.svg?react";
@@ -34,4 +38,8 @@ export {
   ImgOpen,
   ImgProject,
   ImgWorkshop,
+  ImgFree,
+  ImgPort,
+  ImgSide,
+  ImgWorkIm,
 };

@@ -13,5 +13,8 @@ function Community() {
 export default Community;
 
 const CommunityWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
 `;
