@@ -22,4 +22,20 @@ const commuityCategory = [
   "내 생존 유형은?",
 ];
 
-export { navCategory, outLinkCategory, commuityCategory };
+const communityArticle = [
+  {
+    label: "👀 커뮤니티 인기 게시글",
+    title: "UIUX 신입 디자이너 희망하고 있습니다. 이력서 넣",
+    content:
+      "경력은 있지만 전혀 다른 경력이라 디자인은 무경력입니다.. 전 경력들도 알바나, 소개로 일한 곳이라 제가 공고를 보고 지원하",
+    updateDate: "• 5일 전",
+  },
+  {
+    label: "😎 에디터 추천 게시글",
+    title: "오랜만에 몇가지, 인사이트와 현재진행형 경험이 담",
+    content: "올해에는 좋은일과, 그만큼의 나쁜일도 함께 손잡고 찾아오는 한 해인 것 같아요..ㅎㅎ…",
+    updateDate: "• 5일 전",
+  },
+];
+
+export { navCategory, outLinkCategory, commuityCategory, communityArticle };
