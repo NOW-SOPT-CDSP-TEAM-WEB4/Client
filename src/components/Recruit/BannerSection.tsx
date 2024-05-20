@@ -2,9 +2,9 @@ import { styled } from "styled-components";
 
 import { ImgRecruitBanner } from "../../assets";
 
-function BannerContainer() {
+function BannerSection() {
   return (
-    <BannerContainerWrapper>
+    <BannerSectionWrapper>
       <ImgRecruitBanner />
       <BannerTextContainer>
         <BannerTitle>디자이너/창작자를 채용 중이신가요?</BannerTitle>
@@ -12,13 +12,13 @@ function BannerContainer() {
         <PromotionButton>채용 홍보하기</PromotionButton>
         <RecruitHistoryAnchor>나의 채용 공고 내역 보기</RecruitHistoryAnchor>
       </BannerTextContainer>
-    </BannerContainerWrapper>
+    </BannerSectionWrapper>
   );
 }
 
-export default BannerContainer;
+export default BannerSection;
 
-const BannerContainerWrapper = styled.section`
+const BannerSectionWrapper = styled.section`
   display: flex;
   justify-content: center;
 
