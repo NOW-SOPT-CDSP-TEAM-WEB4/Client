@@ -2,32 +2,49 @@ import { useState } from "react";
 
 import { styled } from "styled-components";
 
-import { IcCheckLeft, IcCheckRight, IcCsOne, IcCsTwo, IcCsThree, IcCsFour } from "../../assets";
+import { IcCheckLeft, IcCheckRight } from "../../assets";
+import IcCsOne from "../../assets/img/img_carousel_1.png";
+import IcCsTwo from "../../assets/img/img_carousel_2.png";
+import IcCsThree from "../../assets/img/img_carousel_3.png";
+import IcCsFour from "../../assets/img/img_carousel_4.png";
 
 interface CarouselImgContainerProps {
   offset: number;
+  transition: boolean;
 }
 
 function CarouselContainer() {
   const [offset, setOffset] = useState(0);
+  const [transition, setTransition] = useState(true);
   const imageCount = 4;
-  const imageWidth = 23;
+  const imageWidth = 20;
 
   const handleLeftClick = () => {
-    setOffset((prevOffset) => Math.max(prevOffset + imageWidth, 0));
+    setOffset((prevOffset) => prevOffset + imageWidth);
+    setTransition(true);
   };
 
   const handleRightClick = () => {
-    setOffset((prevOffset) => Math.max(prevOffset - imageWidth, -(imageCount - 1) * imageWidth));
+    setOffset((prevOffset) => prevOffset - imageWidth);
+    setTransition(true);
+  };
+
+  const handleTransitionEnd = () => {
+    if (offset > 0) {
+      setOffset(-(imageWidth * (imageCount - 1)));
+    } else if (offset <= -imageWidth * (imageCount + 1)) {
+      setOffset(0);
+    }
+    setTransition(false);
   };
 
   return (
     <CarouselContainerWrapper>
-      <CarouselImgContainer offset={offset}>
-        <IcOne />
-        <IcTwo />
-        <IcThree />
-        <IcFour />
+      <CarouselImgContainer offset={offset} transition={transition} onTransitionEnd={handleTransitionEnd}>
+        <img src={IcCsFour} alt="Four" />
+        <img src={IcCsOne} alt="One" />
+        <img src={IcCsTwo} alt="Two" />
+        <img src={IcCsThree} alt="Three" />
       </CarouselImgContainer>
       <LeftButton onClick={handleLeftClick}>
         <IcLeftBtn />
@@ -43,19 +60,17 @@ export default CarouselContainer;
 
 const CarouselContainerWrapper = styled.section`
   display: flex;
-  justify-content: center;
   position: relative;
-  overflow: hidden;
   margin-top: 4rem;
   height: 30.3rem;
-  width: 100%;
+  width: 100vw;
 `;
 
 const CarouselImgContainer = styled.section<CarouselImgContainerProps>`
   display: flex;
   gap: 2.3rem;
   transform: translateX(${(props) => props.offset}%);
-  transition: transform 0.5s ease-in-out;
+  transition: ${(props) => (props.transition ? "transform 0.5s ease-in-out" : "none")};
 `;
 
 const LeftButton = styled.button`
@@ -75,19 +90,3 @@ const RightButton = styled.button`
 const IcLeftBtn = styled(IcCheckLeft)``;
 
 const IcRightBtn = styled(IcCheckRight)``;
-
-const IcOne = styled(IcCsOne)`
-  flex: 0 0 23%;
-`;
-
-const IcTwo = styled(IcCsTwo)`
-  flex: 0 0 23%;
-`;
-
-const IcThree = styled(IcCsThree)`
-  flex: 0 0 23%;
-`;
-
-const IcFour = styled(IcCsFour)`
-  flex: 0 0 23%;
-`;
