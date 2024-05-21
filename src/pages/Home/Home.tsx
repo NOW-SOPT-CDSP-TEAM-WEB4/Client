@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import BestFolioSection from "../../components/Home/BsetFolioSection/BestFolioSection";
 import CarouselContainer from "../../components/Home/CarouselContainer";
 import DesignerRecruitSection from "../../components/Home/DesignerRecruitSection/DesignerRecruitSection";
+import NotefolioRecommendSection from "../../components/Home/NotefolioRecommendSection/NotefolioRecommendSection";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <HomeBodyWrapper>
         <BestFolioSection />
         <DesignerRecruitSection />
+        <NotefolioRecommendSection />
       </HomeBodyWrapper>
     </HomeWrapper>
   );
