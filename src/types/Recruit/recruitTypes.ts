@@ -10,3 +10,13 @@ export interface ActiveRecruitItemProps {
   company: string;
   endTime: string;
 }
+
+export interface DesignerRecruitItemProps {
+  imgSrc: string;
+  position: string;
+  title: string;
+  place: string;
+  endTime: string;
+  companyLogo: ReactNode;
+  company: string;
+}
