@@ -76,8 +76,8 @@ const CarouselContainerWrapper = styled.section`
 
 const CarouselImgContainer = styled.section<CarouselImgContainerProps>`
   display: flex;
-  transform: translateX(${(props) => props.offset}px);
-  transition: ${(props) => (props.transition ? "transform 0.5s ease-in-out" : "none")};
+  transform: translateX(${({ offset }) => offset / 10}rem);
+  transition: ${({ transition }) => transition && "transform 0.5s ease-in-out"};
 `;
 
 const CarouselImage = styled.img`
