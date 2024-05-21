@@ -1,11 +1,12 @@
 import React, { KeyboardEvent, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { styled } from "styled-components";
 
 import { IcNew, IcSearch, Logo } from "../../../assets/";
 
 function TopNav() {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
 
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function TopNav() {
   const activeEnter = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       navigate(`/search?keyword=${searchQuery}`);
+      setSearchQuery("");
     }
   };
 
@@ -41,15 +43,17 @@ function TopNav() {
         </BtnContainer>
       </LeftContainer>
       <RightContainer>
-        <SearchBar>
-          <IcSearchIcon />
-          <SearchBarInput
-            placeholder="190,000개 이상의 크리에이티브 검색"
-            value={searchQuery}
-            onChange={saveSearchQuery}
-            onKeyDown={(e) => activeEnter(e)}
-          />
-        </SearchBar>
+        {searchParams.get("keyword") === null && (
+          <SearchBar>
+            <IcSearchIcon />
+            <SearchBarInput
+              placeholder="190,000개 이상의 크리에이티브 검색"
+              value={searchQuery}
+              onChange={saveSearchQuery}
+              onKeyDown={(e) => activeEnter(e)}
+            />
+          </SearchBar>
+        )}
         <LoginContainer>
           <LoginBtn type="button">로그인</LoginBtn>
           <SignupBtn type="button">회원가입</SignupBtn>
@@ -71,6 +75,7 @@ const TopNavWrapper = styled.section`
   display: flex;
   position: sticky;
   top: 0;
+  z-index: 2;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
