@@ -10,6 +10,7 @@ const colors = {
   b07: "#A1A6A6",
   b08: "#768585",
   b09: "#7C8484",
+  b10: "#777777",
 
   w01: "#FFFFFF",
 
@@ -19,6 +20,7 @@ const colors = {
   g04: "#DFDFDF",
   g05: "#E1E1E1",
   g06: "#E5E5E5",
+  g07: "#F6F5FB",
 
   o01: "#FFF5DA",
   o02: "#FF7900",
@@ -32,6 +34,8 @@ const colors = {
   bb03: "#1ECAD3",
   bb04: "#05BCC6",
   bb05: "#1289F6",
+
+  r01: "#F41919",
 
   chips_hover: "#F7F9F9",
 };
