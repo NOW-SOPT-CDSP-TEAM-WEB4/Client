@@ -95,4 +95,6 @@ const Content = styled.article`
 
 const ImgContainer = styled.div`
   display: flex;
+
+  margin: 3rem 0 0 12rem;
 `;
