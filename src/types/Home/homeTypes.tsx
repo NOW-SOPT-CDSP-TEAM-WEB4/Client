@@ -13,4 +13,6 @@ export interface BestFolioHomeItemProps {
   viewNum: number;
   heartNum: number;
   greyHeartLogo: ReactNode;
+  isHearted: boolean;
+  toggleHeart: () => void;
 }

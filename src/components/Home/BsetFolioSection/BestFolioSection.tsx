@@ -1,12 +1,22 @@
+import { useState } from "react";
+
 import { styled } from "styled-components";
 
 import { IcFrame } from "../../../assets/index";
 import { bestfolioHomeList } from "../../../constants/Home/homeConstants";
 import ChipsList from "../../common/ChipList/ChipsList";
-import { chipsTextList } from "../../common/ChipList/constantEx";
+import { chipsTextList } from "../../common/ChipList/HoemChipsTextList";
 import BestFolioItem from "../BestFolioItem/BestFolioItem";
 
 function BestFolioSection() {
+  const [heartedItems, setHeartedItems] = useState(new Array(bestfolioHomeList.length).fill(false));
+
+  const toggleHeart = (index: number) => {
+    const newHeartedItems = [...heartedItems];
+    newHeartedItems[index] = !newHeartedItems[index];
+    setHeartedItems(newHeartedItems);
+  };
+
   return (
     <BestFolioSectionWrapper>
       <BestFolioSectionTitle>국내 최고의 포트폴리오를 발견해보세요.</BestFolioSectionTitle>
@@ -17,8 +27,13 @@ function BestFolioSection() {
         <IcFrameIcon />
       </ToggleBtnSectionContainer>
       <BestFolioItemContainer>
-        {bestfolioHomeList.map((item) => (
-          <BestFolioItem key={item.id} {...item} />
+        {bestfolioHomeList.map((item, index) => (
+          <BestFolioItem
+            key={item.id}
+            {...item}
+            isHearted={heartedItems[index]}
+            toggleHeart={() => toggleHeart(index)}
+          />
         ))}
       </BestFolioItemContainer>
     </BestFolioSectionWrapper>
@@ -63,6 +78,5 @@ const IcFrameIcon = styled(IcFrame)`
 const BestFolioItemContainer = styled.article`
   display: flex;
   column-gap: 2.1rem;
-
   margin-top: 2.1rem;
 `;

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { styled } from "styled-components";
 
 import { IcHeart, IcEmptyHeart } from "../../../assets";
@@ -7,6 +5,8 @@ import { BestFolioHomeItemProps } from "../../../types/Home/homeTypes";
 
 function BestFolioItem({
   imgSrc,
+  isHearted,
+  toggleHeart,
   company,
   companyLogo,
   viewLogo,
@@ -14,17 +14,11 @@ function BestFolioItem({
   heartNum,
   greyHeartLogo,
 }: BestFolioHomeItemProps) {
-  const [isHearted, setIsHearted] = useState(false);
-
-  const toggleHeart = () => {
-    setIsHearted(!isHearted);
-  };
-
   return (
     <BestFolioItemWrapper>
       <ImgContainer>
         <ImgBestFolio src={imgSrc} />
-        <HeartIcon onClick={toggleHeart}>{isHearted ? <IcEmptyHeart /> : <IcHeart />}</HeartIcon>
+        <HeartIcon onClick={toggleHeart}>{isHearted ? <IcHeart /> : <IcEmptyHeart />}</HeartIcon>
       </ImgContainer>
       <HomeUnderContainer>
         <HomeLogoContainer>
