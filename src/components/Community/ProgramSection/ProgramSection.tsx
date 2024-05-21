@@ -7,6 +7,7 @@ import ProgramItem from "./ProgramItem";
 function ProgramSection() {
   const communityProgram1 = [
     {
+      programId: 1,
       title: "제목1",
       content: "내용이 들어갑니다~",
       date: "2022/01/30 (5시)",
@@ -14,6 +15,7 @@ function ProgramSection() {
       src: "/src/assets/img/img_program_1.png",
     },
     {
+      programId: 2,
       title: "제목2",
       content: "내용이 들어갑니다~",
       date: "2022/01/30 (5시)",
@@ -24,6 +26,7 @@ function ProgramSection() {
 
   const communityProgram2 = [
     {
+      programId: 3,
       title: "제목1",
       content: "내용이 들어갑니다~",
       date: "2022/01/30 (5시)",
@@ -31,6 +34,7 @@ function ProgramSection() {
       src: "/src/assets/img/img_program_3.png",
     },
     {
+      programId: 4,
       title: "제목2",
       content: "내용이 들어갑니다~",
       date: "2022/01/30 (5시)",
