@@ -1,14 +1,16 @@
 import { styled } from "styled-components";
 
-import ActiveRecruitSection from "../../components/Recruit/ActiveRecruitSection/ActiveRecruitSection";
-import BannerContainer from "../../components/Recruit/BannerContainer/BannerContainer";
+import ActiveRecruitSection from "../../components/Recruit/ActiveRecruitSection";
+import BannerSection from "../../components/Recruit/BannerSection";
+import DesignerRecruitSection from "../../components/Recruit/DesignerRecruitSection";
 
 function Recruit() {
   return (
     <RecruitWrapper>
-      <BannerContainer />
+      <BannerSection />
       <RecruitBodyWrapper>
         <ActiveRecruitSection />
+        <DesignerRecruitSection />
       </RecruitBodyWrapper>
     </RecruitWrapper>
   );

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import { IcClock } from "../../../assets";
-import { ActiveRecruitItemProps } from "../../../types/Recruit/recruitTypes";
+import { IcClock } from "../../assets";
+import { ActiveRecruitItemProps } from "../../types/Recruit/recruitTypes";
 
 function ActiveRecruitItem({
   imgSrc,
