@@ -61,7 +61,6 @@ const RecommendContent = styled.p`
 
 const ImgContainer = styled.div`
   display: flex;
-  flex-direction: row;
   margin-top: 2.277rem;
   gap: 0.5rem;
 `;
