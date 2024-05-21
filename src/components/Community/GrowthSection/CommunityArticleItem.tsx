@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { communityArticle } from "../../../constatns/Community/communityConstants";
+import { communityArticle } from "../../../constants/Community/communityConstants";
 
 function CommunityArticleItem() {
   return (

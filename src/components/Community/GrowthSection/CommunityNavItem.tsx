@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 import { IcArrowrightRg } from "../../../assets";
-import { communityNav } from "../../../constatns/Community/communityConstants";
+import { communityNav } from "../../../constants/Community/communityConstants";
 
 function CommunityNavItem() {
   return (
@@ -40,14 +40,18 @@ const CommunityNavContainer = styled.button<{ backgroundColor: string }>`
 
   border-radius: 0.8rem;
 
-  background-color: ${({ theme, backgroundColor }) =>
-    backgroundColor === "yellow"
-      ? theme.colors.o01
-      : backgroundColor === "orange"
-        ? theme.colors.o03
-        : backgroundColor === "skyBlue"
-          ? theme.colors.bb01
-          : theme.colors.bb02};
+  background-color: ${({ theme, backgroundColor }) => {
+    switch (backgroundColor) {
+      case "yellow":
+        return theme.colors.o01;
+      case "orange":
+        return theme.colors.o03;
+      case "skyBlue":
+        return theme.colors.bb01;
+      default:
+        return theme.colors.bb02;
+    }
+  }};
 `;
 
 const LabelBox = styled.section`

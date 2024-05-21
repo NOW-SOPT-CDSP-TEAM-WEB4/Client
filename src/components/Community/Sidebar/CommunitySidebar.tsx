@@ -3,7 +3,7 @@ import { useState } from "react";
 import { styled } from "styled-components";
 
 import { IcArrowdownSm } from "../../../assets";
-import { navCategory, outLinkCategory, commuityCategory } from "../../../constatns/Community/communityConstants";
+import { navCategory, outLinkCategory, commuityCategory } from "../../../constants/Community/communityConstants";
 
 import Dropdown from "./Dropdown";
 
