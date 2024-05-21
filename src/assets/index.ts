@@ -1,12 +1,17 @@
 import ImgCommuity from "./img/img_community.svg?react";
 import ImgContents from "./img/img_contents.svg?react";
 import ImgDesign from "./img/img_design.svg?react";
+import ImgFree from "./img/img_free.svg?react";
 import ImgHouse from "./img/img_house.svg?react";
 import ImgOpen from "./img/img_open.svg?react";
+import ImgPort from "./img/img_port.svg?react";
 import ImgProject from "./img/img_project.svg?react";
 import ImgRecruitBanner from "./img/img_recruit_banner.svg?react";
+import ImgSide from "./img/img_side.svg?react";
+import ImgWorkIm from "./img/img_work_im.svg?react";
 import ImgWorkshop from "./img/img_workshop.svg?react";
 import IcArrowDown from "./svg/ic_arrow_down.svg?react";
+import IcArrowrightRg from "./svg/ic_arrowright_rg.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
 import IcClock from "./svg/ic_clock.svg?react";
 import IcDesignerRecruit1 from "./svg/ic_designer_recruit_1.svg?react";
@@ -41,6 +46,7 @@ import Logo from "./svg/logo.svg?react";
 
 export {
   IcArrowDown,
+  IcArrowrightRg,
   IcCheckWhite,
   IcClock,
   IcDesignerRecruit1,
@@ -80,4 +86,8 @@ export {
   ImgOpen,
   ImgProject,
   ImgWorkshop,
+  ImgFree,
+  ImgPort,
+  ImgSide,
+  ImgWorkIm,
 };
