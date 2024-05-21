@@ -34,11 +34,17 @@ const ImgDesignRecruit = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23.2rem;
 `;
 
 const RecruitLetterContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  width: 23.2rem;
+  margin-left: 1.6rem;
 `;
 
 const RecruitTitle = styled.p`
@@ -47,6 +53,7 @@ const RecruitTitle = styled.p`
 `;
 
 const RecruitCompany = styled.p`
-  color: ${({ theme }) => theme.colors.w01};
-  ${({ theme }) => theme.fonts.SemiBold14_17};
+  color: ${({ theme }) => theme.colors.g04};
+  ${({ theme }) => theme.fonts.Medium13_20};
+  letter-spacing: -0.025rem;
 `;

@@ -21,6 +21,7 @@ export default DesignerRecruitSection;
 const DesignerRecruitSectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 4.5rem;
   width: 100%;
   padding: 0 calc((100vw - 124.4rem) / 2);
   background-color: ${({ theme }) => theme.colors.b03};
