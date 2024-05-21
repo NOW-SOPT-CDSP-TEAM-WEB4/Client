@@ -18,6 +18,17 @@ import IcHeart from "./svg/ic_heart.svg?react";
 import IcHeartFilled from "./svg/ic_heart_filled.svg?react";
 import IcHeartOutlined from "./svg/ic_heart_outlined.svg?react";
 import IcLogoAuthor1 from "./svg/ic_logo_author_1.svg?react";
+import IcLogoAuthor10 from "./svg/ic_logo_author_10.svg?react";
+import IcLogoAuthor11 from "./svg/ic_logo_author_11.svg?react";
+import IcLogoAuthor12 from "./svg/ic_logo_author_12.svg?react";
+import IcLogoAuthor2 from "./svg/ic_logo_author_2.svg?react";
+import IcLogoAuthor3 from "./svg/ic_logo_author_3.svg?react";
+import IcLogoAuthor4 from "./svg/ic_logo_author_4.svg?react";
+import IcLogoAuthor5 from "./svg/ic_logo_author_5.svg?react";
+import IcLogoAuthor6 from "./svg/ic_logo_author_6.svg?react";
+import IcLogoAuthor7 from "./svg/ic_logo_author_7.svg?react";
+import IcLogoAuthor8 from "./svg/ic_logo_author_8.svg?react";
+import IcLogoAuthor9 from "./svg/ic_logo_author_9.svg?react";
 import IcLogoDailyMorning from "./svg/ic_logo_daily_morning.svg?react";
 import IcLogoSim from "./svg/ic_logo_sim.svg?react";
 import IcLogoStudioEdink from "./svg/ic_logo_studio_edink.svg?react";
@@ -51,6 +62,17 @@ export {
   IcHeartFilled,
   IcHeartOutlined,
   IcLogoAuthor1,
+  IcLogoAuthor10,
+  IcLogoAuthor11,
+  IcLogoAuthor12,
+  IcLogoAuthor2,
+  IcLogoAuthor3,
+  IcLogoAuthor4,
+  IcLogoAuthor5,
+  IcLogoAuthor6,
+  IcLogoAuthor7,
+  IcLogoAuthor8,
+  IcLogoAuthor9,
   IcLogoDailyMorning,
   IcLogoSim,
   IcLogoStudioEdink,
