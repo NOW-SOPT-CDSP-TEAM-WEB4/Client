@@ -1,70 +1,17 @@
-import { useSearchParams } from "react-router-dom";
 import { styled } from "styled-components";
+
+import { useGetCreativeSearch } from "../../hooks/Search/useGetCreativeSearch";
 
 import SearchResultItem from "./SearchResultItem";
 
-const mockData = [
-  {
-    id: 0,
-    isHeart: true,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 1,
-    isHeart: true,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 2,
-    isHeart: true,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 3,
-    isHeart: true,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 4,
-    isHeart: true,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 5,
-    isHeart: false,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-  {
-    id: 6,
-    isHeart: false,
-    name: "amteum-암튼",
-    view: 153,
-    heart: 0,
-  },
-];
-
 function SearchResultSection() {
-  const [searchParams] = useSearchParams();
+  const { dataList, keyword } = useGetCreativeSearch();
   return (
     <SearchResultSectionWrapper>
-      <SearchText>{`'${searchParams.get("keyword")}' 에 대한 검색 결과`}</SearchText>
-      <CountText>0개의 크리에이티브를 발견했습니다.</CountText>
+      <SearchText>{`'${keyword}' 에 대한 검색 결과`}</SearchText>
+      <CountText>{dataList.length}개의 크리에이티브를 발견했습니다.</CountText>
       <SearchResultItemContainer>
-        {mockData.map((item) => (
-          <SearchResultItem key={item.id} {...item} />
-        ))}
+        {dataList?.map((item) => <SearchResultItem key={item.creativeId} {...item} />)}
       </SearchResultItemContainer>
     </SearchResultSectionWrapper>
   );
