@@ -16,3 +16,10 @@ export interface BestFolioHomeItemProps {
   isHearted: boolean;
   toggleHeart: () => void;
 }
+
+export interface DesignerRecruitItemProps {
+  imgSrc: string;
+  title: string;
+  companyLogo: ReactNode;
+  company: string;
+}
