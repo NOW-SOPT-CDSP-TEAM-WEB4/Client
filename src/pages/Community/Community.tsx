@@ -32,4 +32,6 @@ const CommunityMain = styled.section`
   padding: 4.8rem 13.9rem 12rem 13.9rem;
   width: 112.4rem;
   min-height: 72rem;
+
+  gap: 12rem;
 `;

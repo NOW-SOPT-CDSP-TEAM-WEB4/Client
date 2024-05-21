@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { IcArrowrightRg } from "../../../assets";
 import { communityNav } from "../../../constatns/Community/communityConstants";
@@ -57,7 +57,6 @@ const LabelBox = styled.section`
 
   margin: 1.719rem 0 1.3rem 1.574rem;
   padding: 0.6rem 0.6rem 0.6rem 1.2rem;
-  /* width: 8.7659rem; */
   height: 2.6232rem;
 
   border-radius: 3.5389rem;
