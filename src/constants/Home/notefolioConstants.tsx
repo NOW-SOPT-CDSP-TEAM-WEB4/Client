@@ -1,4 +1,4 @@
-import { IcJaein, IcKush, IcMozza, IcStudioKio } from "../../assets";
+import { IcJaein, IcKush, IcMozza, IcPindit, IcStudioKio } from "../../assets";
 
 export const notefolioRecommendList = [
   {
@@ -14,8 +14,8 @@ export const notefolioRecommendList = [
       "/src/assets/img/img_pindit_2.png",
       "/src/assets/img/img_pindit_3.png",
     ],
-    companyLogo: <IcStudioKio />,
-    company: "StudioKio",
+    companyLogo: <IcPindit />,
+    company: "핀딧스튜디오",
     content: "그래픽 디자인 | 캐릭터 ...",
   },
   {

@@ -1,20 +1,33 @@
 import { styled } from "styled-components";
 
+import { notefolioRecommendList } from "../../../constants/Home/notefolioConstants";
+import NotefolioRecommendItem from "../NotefolioRecommendItem/NotefolioRecommendItem";
+
 function NotefolioRecommendSection() {
   return (
-    <NotefolioRecommendSectionWrapper>
-      <NotefolioRecommendSectionTitle>노트폴리오 추천, HOT 크리에이터</NotefolioRecommendSectionTitle>
-      <NotefolioRecommendItemContainer></NotefolioRecommendItemContainer>
-    </NotefolioRecommendSectionWrapper>
+    <NotefolioRecommendSectionWrapperBox>
+      <NotefolioRecommendSectionWrapper>
+        <NotefolioRecommendSectionTitle>노트폴리오 추천, HOT 크리에이터</NotefolioRecommendSectionTitle>
+        <NotefolioRecommendItemContainer>
+          {notefolioRecommendList.map((item) => (
+            <NotefolioRecommendItem key={item.id} {...item} />
+          ))}
+        </NotefolioRecommendItemContainer>
+      </NotefolioRecommendSectionWrapper>
+    </NotefolioRecommendSectionWrapperBox>
   );
 }
 
 export default NotefolioRecommendSection;
 
+const NotefolioRecommendSectionWrapperBox = styled.div`
+  background-color: ${({ theme }) => theme.colors.chips_hover};
+`;
+
 const NotefolioRecommendSectionWrapper = styled.section`
   width: 100%;
-  margin-top: 4rem;
   padding: 0 calc((100vw - 124.4rem) / 2);
+  padding-top: 4rem;
 `;
 
 const NotefolioRecommendSectionTitle = styled.h2`
