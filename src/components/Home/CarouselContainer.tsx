@@ -54,10 +54,10 @@ function CarouselContainer() {
         ))}
       </CarouselImgContainer>
       <LeftButton onClick={handleLeftClick}>
-        <IcLeftBtn />
+        <IcCheckLeft />
       </LeftButton>
       <RightButton onClick={handleRightClick}>
-        <IcRightBtn />
+        <IcCheckRight />
       </RightButton>
     </CarouselContainerWrapper>
   );
@@ -97,7 +97,3 @@ const RightButton = styled.button`
   right: 1rem;
   transform: translateY(-50%);
 `;
-
-const IcLeftBtn = styled(IcCheckLeft)``;
-
-const IcRightBtn = styled(IcCheckRight)``;
