@@ -19,7 +19,7 @@ function SearchInputSection() {
 
   const handleKeyDownEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      setSearchParams({ keyword: searchWord });
+      searchWord.length !== 0 && setSearchParams({ keyword: searchWord });
     }
   };
 
