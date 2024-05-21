@@ -42,7 +42,9 @@ function BestFolioSection() {
 
 export default BestFolioSection;
 
-const BestFolioSectionWrapper = styled.section``;
+const BestFolioSectionWrapper = styled.section`
+  padding: 0 calc((100vw - 124.4rem) / 2);
+`;
 
 const BestFolioSectionTitle = styled.h2`
   ${({ theme }) => theme.fonts.Bold28_36};

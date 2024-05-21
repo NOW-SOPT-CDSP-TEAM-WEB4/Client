@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 import BestFolioSection from "../../components/Home/BsetFolioSection/BestFolioSection";
 import CarouselContainer from "../../components/Home/CarouselContainer";
+import DesignerRecruitSection from "../../components/Home/DesignerRecruitSection/DesignerRecruitSection";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <CarouselContainer />
       <HomeBodyWrapper>
         <BestFolioSection />
+        <DesignerRecruitSection />
       </HomeBodyWrapper>
     </HomeWrapper>
   );
@@ -20,6 +22,6 @@ const HomeWrapper = styled.div`
   width: 100%;
 `;
 
-const HomeBodyWrapper = styled.main`
-  padding: 0 calc((100vw - 124.4rem) / 2);
+const HomeBodyWrapper = styled.div`
+  width: 100%;
 `;
