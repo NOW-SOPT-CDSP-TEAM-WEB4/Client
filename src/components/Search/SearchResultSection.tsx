@@ -45,7 +45,7 @@ const CountText = styled.p`
 
 const SearchResultItemContainer = styled.article`
   display: grid;
-  margin: 6.4rem 0 20rem 0;
+  margin: 6.4rem 0 10rem 0;
   gap: 4.8rem 2.4rem;
   grid-template-columns: repeat(4, 1fr);
 `;
