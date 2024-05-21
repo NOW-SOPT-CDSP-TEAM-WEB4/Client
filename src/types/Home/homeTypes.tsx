@@ -10,7 +10,7 @@ export interface BestFolioHomeItemProps {
   company: string;
   companyLogo: ReactNode;
   viewLogo: ReactNode;
-  viewNum: string;
-  heartNum: string;
+  viewNum: number;
+  heartNum: number;
   greyHeartLogo: ReactNode;
 }
