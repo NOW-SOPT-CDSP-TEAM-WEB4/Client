@@ -25,6 +25,8 @@ const PopularItemWrapper = styled.section`
 const PopularItemContainer = styled.button`
   display: flex;
   flex-direction: column;
+
+  padding: 0;
 `;
 
 const PopularImg = styled.img`
@@ -66,11 +68,11 @@ const Title = styled.div`
 const Content = styled.article`
   display: flex;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 
   color: ${({ theme }) => theme.colors.b05};
 
-  ${({ theme }) => theme.fonts.Regular15_24};
+  ${({ theme }) => theme.fonts.Regular15_Auto};
 `;
 
 const Date = styled.article`
@@ -78,5 +80,5 @@ const Date = styled.article`
 
   color: ${({ theme }) => theme.colors.b09};
 
-  ${({ theme }) => theme.fonts.Medium14_22};
+  ${({ theme }) => theme.fonts.Regular14_22};
 `;

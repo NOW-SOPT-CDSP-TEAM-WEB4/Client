@@ -5,8 +5,8 @@ import PopularItem from "./PopularItem";
 function PopularSection() {
   const popularWorkshop = [
     {
-      title: "제목",
-      content: "내용이 들어갑니다~",
+      title: "캐릭터 브랜딩 실무 워크숍 (입문반)",
+      content: "캐릭터 디자인의 기초 + 가이드북 완성까지! ",
       date: "2022/01/30 (5시)",
       online: true,
       src: "/src/assets/img/img_popular1.png",
@@ -52,6 +52,8 @@ const PopularSectionWrapper = styled.section`
 
 const PopularContainer = styled.section`
   display: flex;
+
+  gap: 2.4rem;
 `;
 
 const Title = styled.div`

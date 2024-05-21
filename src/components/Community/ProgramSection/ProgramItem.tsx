@@ -25,6 +25,8 @@ const ProgramItemWrapper = styled.section`
 const ProgramItemContainer = styled.button`
   display: flex;
   flex-direction: column;
+
+  padding: 0;
 `;
 
 const ProgramImg = styled.img`
