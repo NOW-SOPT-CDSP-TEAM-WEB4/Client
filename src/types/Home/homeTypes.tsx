@@ -23,3 +23,9 @@ export interface DesignerRecruitItemProps {
   companyLogo: ReactNode;
   company: string;
 }
+export interface NotefolioRecommendItemProps {
+  imgSrc: string;
+  companyLogo: ReactNode;
+  company: string;
+  content: string;
+}
