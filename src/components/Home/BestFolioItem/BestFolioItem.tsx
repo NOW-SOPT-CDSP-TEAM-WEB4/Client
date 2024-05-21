@@ -57,7 +57,7 @@ const ImgBestFolio = styled.img`
   object-fit: cover;
 `;
 
-const HeartIcon = styled.div`
+const HeartIcon = styled.button`
   position: absolute;
   top: 1rem;
   right: 1rem;
