@@ -23,6 +23,8 @@ const CommunityArticleItemWrapper = styled.section`
   display: flex;
   flex-direction: row;
 
+  margin-bottom: 2.4rem;
+
   gap: 2.4rem;
 `;
 const CommunityArticleItemContainer = styled.button`
@@ -57,7 +59,8 @@ const LabelBox = styled.div<{ backgroundColor: string }>`
 
   border-radius: 0.4rem;
 
-  background: ${(props) => props.backgroundColor};
+  background-color: ${({ theme, backgroundColor }) =>
+    backgroundColor === "blue" ? theme.colors.bb05 : theme.colors.gg02};
 `;
 
 const Title = styled.div`

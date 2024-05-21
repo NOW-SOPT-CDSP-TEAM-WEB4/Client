@@ -11,6 +11,7 @@ import ImgSide from "./img/img_side.svg?react";
 import ImgWorkIm from "./img/img_work_im.svg?react";
 import ImgWorkshop from "./img/img_workshop.svg?react";
 import IcArrowDown from "./svg/ic_arrow_down.svg?react";
+import IcArrowrightRg from "./svg/ic_arrowright_rg.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
 import IcClock from "./svg/ic_clock.svg?react";
 import IcDesignerRecruit1 from "./svg/ic_designer_recruit_1.svg?react";
@@ -57,6 +58,7 @@ export {
   ImgSide,
   ImgWorkIm,
   IcArrowDown,
+  IcArrowrightRg,
   IcCheckWhite,
   IcClock,
   IcDesignerRecruit1,

@@ -3,6 +3,7 @@ import React from "react";
 import { styled } from "styled-components";
 
 import CommunityArticleItem from "./CommunityArticleItem";
+import CommunityNavItem from "./CommunityNavItem";
 
 function GrowthSection() {
   return (
@@ -15,6 +16,9 @@ function GrowthSection() {
       <CommunityArticleSection>
         <CommunityArticleItem />
       </CommunityArticleSection>
+      <CommunityNavSection>
+        <CommunityNavItem />
+      </CommunityNavSection>
     </GrowthSectionWrapper>
   );
 }
@@ -53,5 +57,10 @@ const CommunityArticleSection = styled.article`
   display: flex;
   flex-direction: row;
 
-  padding-bottom: 2.4rem;
+  padding-bottom: 3.1rem;
+`;
+
+const CommunityNavSection = styled.section`
+  display: flex;
+  flex-direction: row;
 `;
