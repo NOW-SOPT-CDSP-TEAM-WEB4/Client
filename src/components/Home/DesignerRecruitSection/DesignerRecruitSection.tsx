@@ -1,10 +1,17 @@
 import { styled } from "styled-components";
 
+import { designerRecruitList } from "../../../constants/Home/designerConstants";
+import DesignerRecruitItem from "../DesignerRecruitItem/DesignerRecruitItem";
+
 function DesignerRecruitSection() {
   return (
     <DesignerRecruitSectionWrapper>
       <DesignerRecruitSectionTitle>디자이너 채용 정보는 노트폴리오에서!</DesignerRecruitSectionTitle>
-      <DesignerRecruitItemContainer></DesignerRecruitItemContainer>
+      <DesignerRecruitItemContainer>
+        {designerRecruitList.map((item) => (
+          <DesignerRecruitItem key={item.id} {...item} />
+        ))}
+      </DesignerRecruitItemContainer>
     </DesignerRecruitSectionWrapper>
   );
 }
