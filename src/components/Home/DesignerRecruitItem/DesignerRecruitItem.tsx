@@ -24,6 +24,7 @@ const DesignerRecruitItemWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 23.2rem;
+  margin-bottom: 4.2rem;
 `;
 
 const ImgDesignRecruit = styled.img`
@@ -38,6 +39,7 @@ const InfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 23.2rem;
+  margin-top: 1.1rem;
 `;
 
 const RecruitLetterContainer = styled.div`
