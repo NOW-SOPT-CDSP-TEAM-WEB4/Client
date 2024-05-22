@@ -83,4 +83,68 @@ const communityNav = [
   },
 ];
 
-export { navCategory, outLinkCategory, commuityCategory, communityArticle, communityNav };
+const carouselList = [
+  {
+    itemId: 1,
+    title: "디자이너용 코딩 지식은 따로 있다?",
+    content: "《디자이너를 위한 코딩 워크숍》에서 2달 만에 코딩 역량 장착하기",
+    src: "/src/assets/img/img_carousel_1.png",
+  },
+  {
+    itemId: 2,
+    title: "인기 콜라보 일러스트레이터로 거듭나기!",
+    content: "<커머셜 일러스트 챌린지> 모집중",
+    src: "/src/assets/img/img_carousel_2.png",
+  },
+  {
+    itemId: 3,
+    title: "현직자 눈에 띄는 UX/UI 프로젝트 완성!",
+    content: "5주 완성 UX/UI 리디자인 프로젝트 완성 워크숍 3기",
+    src: "/src/assets/img/img_carousel_3.png",
+  },
+  {
+    itemId: 4,
+    title: "5주 만에 완성하는 포트폴리오 챌린지!",
+    content: "매주 새로운 프로젝트 주제 + 온라인 피드백 제공",
+    src: "/src/assets/img/img_carousel_4.png",
+  },
+  {
+    itemId: 5,
+    title: "내 아이패드 심폐소생 프로젝트",
+    content: "드로잉 기초부터 나만의 작품 완성까지, 아이패드 드로잉 워크숍",
+    src: "/src/assets/img/img_carousel_5.png",
+  },
+];
+
+const carouselTemList = [
+  {
+    itemId: 1,
+    src: "/src/assets/img/img_carousel_all_1.png",
+  },
+  {
+    itemId: 2,
+    src: "/src/assets/img/img_carousel_all_2.png",
+  },
+  {
+    itemId: 3,
+    src: "/src/assets/img/img_carousel_all_3.png",
+  },
+  {
+    itemId: 4,
+    src: "/src/assets/img/img_carousel_all_4.png",
+  },
+  {
+    itemId: 5,
+    src: "/src/assets/img/img_carousel_all_5.png",
+  },
+];
+
+export {
+  navCategory,
+  outLinkCategory,
+  commuityCategory,
+  communityArticle,
+  communityNav,
+  carouselList,
+  carouselTemList,
+};

@@ -40,6 +40,7 @@ import IcSym from "./svg/ic_sym.svg?react";
 import IcTopBar from "./svg/ic_top_bar.svg?react";
 import IcView from "./svg/ic_view.svg?react";
 import IcArrowdownSm from "./svg/icons_arrowdown_sm.svg?react";
+import IcArrowleftRg from "./svg/icons_arrowleft_rg.svg?react";
 import IcNew from "./svg/icons_New.svg?react";
 import IcSearch from "./svg/icons_Search.svg?react";
 import Logo from "./svg/logo.svg?react";
@@ -79,6 +80,7 @@ export {
   ImgRecruitBanner,
   Logo,
   IcArrowdownSm,
+  IcArrowleftRg,
   ImgCommuity,
   ImgContents,
   ImgDesign,

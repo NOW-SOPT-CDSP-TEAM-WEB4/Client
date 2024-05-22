@@ -14,3 +14,15 @@ export interface PopularItemProps {
   online: boolean;
   src: string;
 }
+
+export interface CarouselProps {
+  itemId: number;
+  title: string;
+  content: string;
+  src: string;
+}
+
+export interface CarouselTemProps {
+  itemId: number;
+  src: string;
+}
