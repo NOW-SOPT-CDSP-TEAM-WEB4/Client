@@ -121,9 +121,7 @@ const ItemNum = styled.div`
   display: flex;
   position: absolute;
 
-  margin: 40rem 0 0 75rem;
-  /* right: 0;
-  bottom: 0; */
+  margin: 42rem 0 0 76rem;
 
   ${({ theme }) => theme.fonts.Bold14_22};
   color: ${({ theme }) => theme.colors.w01};
