@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import { ProgramItemProps } from "../../types/Community/communityProps";
+import { ProgramItemProps } from "../../../types/Community/communityProps";
 
-function ProgramItem({ title, content, date, online, src }: ProgramItemProps) {
+function ProgramItem({ programId, title, content, date, online, src }: ProgramItemProps) {
   return (
     <ProgramItemWrapper>
-      <ProgramItemContainer key={title}>
+      <ProgramItemContainer key={programId}>
         <ProgramImg src={src} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
@@ -25,6 +25,8 @@ const ProgramItemWrapper = styled.section`
 const ProgramItemContainer = styled.button`
   display: flex;
   flex-direction: column;
+
+  padding: 0;
 `;
 
 const ProgramImg = styled.img`

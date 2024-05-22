@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
 import GrowthSection from "../../components/Community/GrowthSection/GrowthSection";
-import ProgramSection from "../../components/Community/ProgramSection";
+import PopularSection from "../../components/Community/PopularSection/PopularSection";
+import ProgramSection from "../../components/Community/ProgramSection/ProgramSection";
 import CommunitySidebar from "../../components/Community/Sidebar/CommunitySidebar";
 
 function Community() {
@@ -11,6 +12,7 @@ function Community() {
       <CommunityMain>
         <GrowthSection />
         <ProgramSection />
+        <PopularSection />
       </CommunityMain>
     </CommunityWrapper>
   );
