@@ -7,11 +7,11 @@ export interface CarouselImgContainerProps {
 
 export interface BestFolioHomeItemProps {
   imgSrc: string;
-  company: string;
+  name: string;
   companyLogo: ReactNode;
   viewLogo: ReactNode;
-  viewNum: number;
-  heartNum: number;
+  view: number;
+  like: number;
   greyHeartLogo: ReactNode;
   isHearted: boolean;
   toggleHeart: () => void;
