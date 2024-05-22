@@ -67,6 +67,9 @@ function CommunityCarousel() {
             <CarouselImg src={item.src} />
             <Title>{item.title}</Title>
             <Content>{item.content}</Content>
+            <ItemNum>
+              {item.itemId} / {currList.length - 2}
+            </ItemNum>
           </CarouselItem>
         ))}
       </Carousel>
@@ -109,6 +112,21 @@ const Content = styled.div`
   bottom: 0;
 
   ${({ theme }) => theme.fonts.SemiBold16_24};
+  color: ${({ theme }) => theme.colors.w01};
+
+  writing-mode: horizontal-tb;
+  z-index: 2;
+`;
+
+const ItemNum = styled.div`
+  display: flex;
+  position: absolute;
+
+  margin: 4rem;
+  right: 0;
+  bottom: 0;
+
+  ${({ theme }) => theme.fonts.Bold14_22};
   color: ${({ theme }) => theme.colors.w01};
 
   writing-mode: horizontal-tb;
