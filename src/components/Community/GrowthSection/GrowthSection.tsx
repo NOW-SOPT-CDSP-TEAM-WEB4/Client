@@ -3,6 +3,7 @@ import React from "react";
 import { styled } from "styled-components";
 
 import CommunityArticleItem from "./CommunityArticleItem";
+import CommunityCarousel from "./CommunityCarousel";
 import CommunityNavItem from "./CommunityNavItem";
 
 function GrowthSection() {
@@ -12,7 +13,9 @@ function GrowthSection() {
         <TitleText>노트폴리오는 창작자와 디자이너의</TitleText>
         <TitleText>모든 성장을 돕습니다.</TitleText>
       </TitleSection>
-      <CommunityCarousel />
+      <CommunityCarouselContainer>
+        <CommunityCarousel />
+      </CommunityCarouselContainer>
       <CommunityArticleSection>
         <CommunityArticleItem />
       </CommunityArticleSection>
@@ -42,15 +45,13 @@ const TitleText = styled.div`
   ${({ theme }) => theme.fonts.Bold40_56};
 `;
 
-const CommunityCarousel = styled.section`
+const CommunityCarouselContainer = styled.section`
   display: flex;
+  flex-shrink: 0;
 
   margin-bottom: 2rem;
   width: 84.6rem;
   height: 47.6rem;
-
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.69%, rgba(0, 0, 0, 0.85) 100%);
-  border: 0.1rem solid;
 `;
 
 const CommunityArticleSection = styled.article`

@@ -14,3 +14,8 @@ export interface PopularItemProps {
   online: boolean;
   src: string;
 }
+
+export interface CarouselProps {
+  itemId: number;
+  src: string;
+}
