@@ -21,3 +21,8 @@ export interface CarouselProps {
   content: string;
   src: string;
 }
+
+export interface CarouselTemProps {
+  itemId: number;
+  src: string;
+}

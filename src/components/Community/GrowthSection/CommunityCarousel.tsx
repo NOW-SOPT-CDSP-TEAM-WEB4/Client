@@ -3,24 +3,24 @@ import { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import { IcArrowleftRg, IcArrowrightRg } from "../../../assets";
-import { carouselList } from "../../../constants/Community/communityConstants";
-import { CarouselProps } from "../../../types/Community/communityProps";
+import { carouselTemList } from "../../../constants/Community/communityConstants";
+import { CarouselTemProps } from "../../../types/Community/communityProps";
 
 function CommunityCarousel() {
   const [currIndex, setCurrIndex] = useState(0);
-  const [currList, setCurrList] = useState<CarouselProps[]>([]);
+  const [currList, setCurrList] = useState<CarouselTemProps[]>([]);
 
   const carouselRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    if (carouselList.length !== 0) {
-      const startData = carouselList[0];
-      const endData = carouselList[carouselList.length - 1];
-      const newList = [endData, ...carouselList, startData];
+    if (carouselTemList.length !== 0) {
+      const startData = carouselTemList[0];
+      const endData = carouselTemList[carouselTemList.length - 1];
+      const newList = [endData, ...carouselTemList, startData];
 
       setCurrList(newList);
     }
-  }, [carouselList]);
+  }, [carouselTemList]);
 
   useEffect(() => {
     if (carouselRef.current !== null) {
@@ -40,10 +40,10 @@ function CommunityCarousel() {
   const handleSwipe = (direction: number) => {
     const newIndex = currIndex + direction;
 
-    if (newIndex === carouselList.length + 1) {
+    if (newIndex === carouselTemList.length + 1) {
       moveToNthSlide(1);
     } else if (newIndex === 0) {
-      moveToNthSlide(carouselList.length);
+      moveToNthSlide(carouselTemList.length);
     }
 
     setCurrIndex((prev) => prev + direction);
@@ -65,11 +65,11 @@ function CommunityCarousel() {
         {currList.map((item) => (
           <CarouselItem key={item.itemId}>
             <CarouselImg src={item.src} />
-            <Title>{item.title}</Title>
-            <Content>{item.content}</Content>
-            <ItemNum>
+            {/* <Title>{item.title}</Title>
+            <Content>{item.content}</Content> */}
+            {/* <ItemNum>
               {item.itemId} / {currList.length - 2}
-            </ItemNum>
+            </ItemNum> */}
           </CarouselItem>
         ))}
       </Carousel>
@@ -90,48 +90,47 @@ const CommunityCarouselWrapper = styled.div`
   overflow: hidden;
 `;
 
-const Title = styled.div`
-  display: flex;
-  position: absolute;
+// 같이 export 된 이미지 말고 따로 쓸 때 사용!!
+// const Title = styled.div`
+//   display: flex;
+//   position: absolute;
 
-  margin: 7.6rem 4rem;
-  bottom: 0;
+//   margin: 7.6rem 4rem;
+//   bottom: 0;
 
-  ${({ theme }) => theme.fonts.Bold32_Auto};
-  color: ${({ theme }) => theme.colors.w01};
+//   ${({ theme }) => theme.fonts.Bold32_Auto};
+//   color: ${({ theme }) => theme.colors.w01};
 
-  writing-mode: horizontal-tb;
-  z-index: 2;
-`;
+//   z-index: 2;
+// `;
 
-const Content = styled.div`
-  display: flex;
-  position: absolute;
+// const Content = styled.div`
+//   display: flex;
+//   position: absolute;
 
-  margin: 4rem;
-  bottom: 0;
+//   margin: 4rem;
+//   bottom: 0;
 
-  ${({ theme }) => theme.fonts.SemiBold16_24};
-  color: ${({ theme }) => theme.colors.w01};
+//   ${({ theme }) => theme.fonts.SemiBold16_24};
+//   color: ${({ theme }) => theme.colors.w01};
 
-  writing-mode: horizontal-tb;
-  z-index: 2;
-`;
+//   z-index: 2;
+// `;
 
-const ItemNum = styled.div`
-  display: flex;
-  position: absolute;
+// const ItemNum = styled.div`
+//   display: flex;
+//   position: absolute;
 
-  margin: 4rem;
-  right: 0;
-  bottom: 0;
+//   margin: 4rem;
+//   right: 0;
+//   bottom: 0;
 
-  ${({ theme }) => theme.fonts.Bold14_22};
-  color: ${({ theme }) => theme.colors.w01};
+//   ${({ theme }) => theme.fonts.Bold14_22};
+//   color: ${({ theme }) => theme.colors.w01};
 
-  writing-mode: horizontal-tb;
-  z-index: 2;
-`;
+//   writing-mode: horizontal-tb;
+//   z-index: 2;
+// `;
 
 const SwipeLeft = styled.button`
   display: block;

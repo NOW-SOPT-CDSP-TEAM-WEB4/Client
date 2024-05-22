@@ -116,4 +116,35 @@ const carouselList = [
   },
 ];
 
-export { navCategory, outLinkCategory, commuityCategory, communityArticle, communityNav, carouselList };
+const carouselTemList = [
+  {
+    itemId: 1,
+    src: "/src/assets/img/img_carousel_all_1.png",
+  },
+  {
+    itemId: 2,
+    src: "/src/assets/img/img_carousel_all_2.png",
+  },
+  {
+    itemId: 3,
+    src: "/src/assets/img/img_carousel_all_3.png",
+  },
+  {
+    itemId: 4,
+    src: "/src/assets/img/img_carousel_all_4.png",
+  },
+  {
+    itemId: 5,
+    src: "/src/assets/img/img_carousel_all_5.png",
+  },
+];
+
+export {
+  navCategory,
+  outLinkCategory,
+  commuityCategory,
+  communityArticle,
+  communityNav,
+  carouselList,
+  carouselTemList,
+};
