@@ -11,16 +11,21 @@ import IcFloggy from "./svg/ic_floggy.svg?react";
 import IcFrame from "./svg/ic_frame.svg?react";
 import IcGreyHeart from "./svg/ic_grey_heart.svg?react";
 import IcHeart from "./svg/ic_heart.svg?react";
+import IcJaein from "./svg/ic_JAEIN.svg?react";
 import IcKinder from "./svg/ic_kinder.svg?react";
+import IcKush from "./svg/ic_KUSH.svg?react";
 import IcLogoSim from "./svg/ic_logo_sim.svg?react";
 import IcLoud from "./svg/ic_loud.svg?react";
 import IcMog from "./svg/ic_mog.svg?react";
 import IcMolly from "./svg/ic_molly.svg?react";
+import IcMozza from "./svg/ic_Mozza.svg?react";
 import IcNextButton from "./svg/ic_next_button.svg?react";
+import IcPindit from "./svg/ic_pindit.svg?react";
 import IcSpeak from "./svg/ic_speak.svg?react";
 import IcStudioEdink from "./svg/ic_studio edink.svg?react";
 import IcStudioKey from "./svg/ic_studio key.svg?react";
 import IcStudio from "./svg/ic_studio.svg?react";
+import IcStudioKio from "./svg/ic_studioKIO.svg?react";
 import IcSturning from "./svg/ic_sturning.svg?react";
 import IcSym from "./svg/ic_sym.svg?react";
 import IcTopBar from "./svg/ic_top_bar.svg?react";
@@ -31,6 +36,11 @@ import Logo from "./svg/logo.svg?react";
 
 export {
   Logo,
+  IcMozza,
+  IcKush,
+  IcPindit,
+  IcStudioKio,
+  IcJaein,
   IcDesign,
   IcStudioEdink,
   IcCheckWhite,
