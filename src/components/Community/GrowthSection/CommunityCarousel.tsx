@@ -65,6 +65,8 @@ function CommunityCarousel() {
         {currList.map((item) => (
           <CarouselItem key={item.itemId}>
             <CarouselImg src={item.src} />
+            <Title>{item.title}</Title>
+            <Content>{item.content}</Content>
           </CarouselItem>
         ))}
       </Carousel>
@@ -83,6 +85,34 @@ const CommunityCarouselWrapper = styled.div`
   border-radius: 1.2rem;
 
   overflow: hidden;
+`;
+
+const Title = styled.div`
+  display: flex;
+  position: absolute;
+
+  margin: 7.6rem 4rem;
+  bottom: 0;
+
+  ${({ theme }) => theme.fonts.Bold32_Auto};
+  color: ${({ theme }) => theme.colors.w01};
+
+  writing-mode: horizontal-tb;
+  z-index: 2;
+`;
+
+const Content = styled.div`
+  display: flex;
+  position: absolute;
+
+  margin: 4rem;
+  bottom: 0;
+
+  ${({ theme }) => theme.fonts.SemiBold16_24};
+  color: ${({ theme }) => theme.colors.w01};
+
+  writing-mode: horizontal-tb;
+  z-index: 2;
 `;
 
 const SwipeLeft = styled.button`

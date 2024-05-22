@@ -17,5 +17,7 @@ export interface PopularItemProps {
 
 export interface CarouselProps {
   itemId: number;
+  title: string;
+  content: string;
   src: string;
 }
