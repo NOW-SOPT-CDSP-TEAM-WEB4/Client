@@ -1,54 +1,45 @@
+import { useState, useEffect } from "react";
+
 import { styled } from "styled-components";
+
+import { getProgram } from "../../../apis/Community/getProgram";
+import { ProgramItemProps } from "../../../types/Community/communityProps";
 
 import ProgramItem from "./ProgramItem";
 
-// api 연결할 때 여기서 워크샵 목록 ProgramItem으로 props 전달해주기
-
 function ProgramSection() {
-  const communityProgram1 = [
-    {
-      programId: 1,
-      title: "제목1",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: true,
-      src: "/src/assets/img/img_program_1.png",
-    },
-    {
-      programId: 2,
-      title: "제목2",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: false,
-      src: "/src/assets/img/img_program_2.png",
-    },
-  ];
+  const [programList1, setProgramList1] = useState<ProgramItemProps[]>([]);
 
-  const communityProgram2 = [
-    {
-      programId: 3,
-      title: "제목1",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: true,
-      src: "/src/assets/img/img_program_3.png",
-    },
-    {
-      programId: 4,
-      title: "제목2",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: false,
-      src: "/src/assets/img/img_program_4.png",
-    },
-  ];
+  const [programList2, setProgramList2] = useState<ProgramItemProps[]>([]);
+
+  useEffect(() => {
+    const getProgramList = async () => {
+      try {
+        const apiGet = await getProgram();
+        const newList1 = [];
+        const newList2 = [];
+        for (let i = 0; i < 4; i++) {
+          const apiItem = apiGet.find((api: ProgramItemProps) => api.id === i + 1);
+          {
+            i < 2 ? newList1.push(apiItem) : newList2.push(apiItem);
+          }
+        }
+        setProgramList1(newList1);
+        setProgramList2(newList2);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getProgramList();
+  }, []);
 
   return (
     <ProgramSectionWrapper>
       <ProgramOutContainer>
         <Title>새롭게 오픈한 프로그램 💡</Title>
         <ProgramContainer>
-          {communityProgram1.map((item) => (
+          {programList1.map((item) => (
             <ProgramItem key={item.title} {...item} />
           ))}
         </ProgramContainer>
@@ -56,7 +47,7 @@ function ProgramSection() {
       <ProgramOutContainer>
         <Title>프로덕트 디자이너로 성장하기</Title>
         <ProgramContainer>
-          {communityProgram2.map((item) => (
+          {programList2.map((item) => (
             <ProgramItem key={item.title} {...item} />
           ))}
         </ProgramContainer>
@@ -94,4 +85,6 @@ const Title = styled.div`
 const ProgramContainer = styled.section`
   display: flex;
   flex-direction: row;
+
+  gap: 2.4rem;
 `;

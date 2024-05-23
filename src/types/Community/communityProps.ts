@@ -1,5 +1,5 @@
 export interface ProgramItemProps {
-  programId: number;
+  id: number;
   title: string;
   content: string;
   date: string;
