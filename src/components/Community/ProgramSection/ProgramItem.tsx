@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 import { ProgramItemProps } from "../../../types/Community/communityProps";
 
-function ProgramItem({ programId, title, content, date, online, src }: ProgramItemProps) {
+function ProgramItem({ id, title, content, date, online }: ProgramItemProps) {
+  console.log(id, title, content);
   return (
     <ProgramItemWrapper>
-      <ProgramItemContainer key={programId}>
-        <ProgramImg src={src} />
+      <ProgramItemContainer key={id}>
+        <ProgramImg src={`/src/assets/img/img_program_${id}.png`} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>
