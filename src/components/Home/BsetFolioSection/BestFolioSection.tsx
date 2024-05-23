@@ -18,7 +18,6 @@ function BestFolioSection() {
     const fetchCreativeData = async () => {
       try {
         const apiData = await getCreativeInquire();
-        console.log("Fetched creative data:", apiData);
 
         const updatedList = bestfolioHomeList.map((item) => {
           const apiItem = apiData.find((api) => api.creativeId === item.creativeId);
