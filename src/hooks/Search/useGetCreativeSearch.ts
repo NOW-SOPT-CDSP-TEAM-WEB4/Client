@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
-import { getCreativeSearch } from "../../utils/Search/getCreativeSearch";
+import { getCreativeSearch } from "../../utils/getCreativeSearch";
 
 export const useGetCreativeSearch = () => {
   const [searchParams] = useSearchParams();

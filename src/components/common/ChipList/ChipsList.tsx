@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from "react";
 import { styled } from "styled-components";
 
 import { IcNextButton } from "../../../assets";
-import { throttle } from "../../../utils/common/throttle";
+import { throttle } from "../../../utils/throttle";
 
 import Chip from "./Chip";
 import { ChipsListProps } from "./types/chipsListType";
