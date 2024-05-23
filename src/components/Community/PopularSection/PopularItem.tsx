@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-import { PopularItemProps } from "../../../types/Community/communityProps";
+import { WorkshopItemProps } from "../../../types/Community/communityProps";
 
-function PopularItem({ title, content, date, online, src }: PopularItemProps) {
+function PopularItem({ title, content, date, online }: WorkshopItemProps) {
   return (
     <PopularItemWrapper>
       <PopularItemContainer key={title}>
-        <PopularImg src={src} />
+        <PopularImg src={`/src/assets/img/img_popular${1}.png`} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>

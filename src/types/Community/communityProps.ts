@@ -7,7 +7,7 @@ export interface ProgramItemProps {
   src: string;
 }
 
-export interface PopularItemProps {
+export interface WorkshopItemProps {
   title: string;
   content: string;
   date: string;
