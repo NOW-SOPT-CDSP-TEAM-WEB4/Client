@@ -94,4 +94,6 @@ const Title = styled.div`
 const ProgramContainer = styled.section`
   display: flex;
   flex-direction: row;
+
+  gap: 2.4rem;
 `;
