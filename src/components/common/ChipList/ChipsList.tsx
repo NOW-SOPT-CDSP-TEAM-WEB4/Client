@@ -42,7 +42,7 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
     setIsEnd(currentScrollPos >= maxScrollLeft);
   };
 
-  const throttledScroll = useCallback(() => throttle(handleScroll, 200), []);
+  const throttledHandleScroll = useCallback(() => throttle(handleScroll, 200), []);
 
   return (
     <ChipsListWrapper>
@@ -58,7 +58,7 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
           <IcNextButton />
         </RightButton>
       )}
-      <ChipsListBox ref={chipsListBoxRef} onScroll={throttledScroll}>
+      <ChipsListBox ref={chipsListBoxRef} onScroll={throttledHandleScroll}>
         {chipsTextList.map((buttonText: string, idx: number) => (
           <Chip
             key={`chip-${idx}`}
