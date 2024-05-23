@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ProgramItemProps } from "../../../types/Community/communityProps";
 
 function ProgramItem({ id, title, content, date, online }: ProgramItemProps) {
-  console.log(id, title, content);
   return (
     <ProgramItemWrapper>
       <ProgramItemContainer key={id}>
