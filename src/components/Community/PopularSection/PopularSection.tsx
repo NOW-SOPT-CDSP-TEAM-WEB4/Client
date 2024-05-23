@@ -6,7 +6,7 @@ function PopularSection() {
   const popularWorkshop = [
     {
       title: "캐릭터 브랜딩 실무 워크숍 (입문반)",
-      content: "캐릭터 디자인의 기초 + 가이드북 완성까지! ",
+      content: "캐릭터 디자인의 기초 + 가이드북 완성까지!",
       date: "2022/01/30 (5시)",
       online: true,
       src: "/src/assets/img/img_popular1.png",
