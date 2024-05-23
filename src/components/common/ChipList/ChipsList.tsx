@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { styled } from "styled-components";
 
@@ -42,7 +42,7 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
     setIsEnd(currentScrollPos >= maxScrollLeft);
   };
 
-  const throttledScroll = useMemo(() => throttle(handleScroll, 200), []);
+  const throttledScroll = useCallback(() => throttle(handleScroll, 200), []);
 
   return (
     <ChipsListWrapper>
