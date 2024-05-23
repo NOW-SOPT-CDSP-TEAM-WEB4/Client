@@ -6,7 +6,7 @@ function PopularItem({ title, content, date, online }: WorkshopItemProps) {
   return (
     <PopularItemWrapper>
       <PopularItemContainer key={title}>
-        <PopularImg src={`/src/assets/img/img_popular${1}.png`} />
+        <PopularImg src={`/src/assets/img/img_popular_${1}.png`} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>
