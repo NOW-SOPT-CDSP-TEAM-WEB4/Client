@@ -1,15 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { styled } from "styled-components";
 
-import { IcFrame } from "../../../assets/index";
+import { getCreativeInquire } from "../../../apis/Home/getCreativeInquire";
+import { IcFrame, IcView, IcGreyHeart } from "../../../assets/index";
 import { bestfolioHomeList } from "../../../constants/Home/homeConstants";
 import ChipsList from "../../common/ChipList/ChipsList";
 import { chipsTextList } from "../../common/ChipList/HoemChipsTextList";
 import BestFolioItem from "../BestFolioItem/BestFolioItem";
 
 function BestFolioSection() {
+  const [bestfolioList, setBestfolioList] = useState(bestfolioHomeList);
   const [heartedItems, setHeartedItems] = useState(new Array(bestfolioHomeList.length).fill(false));
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchCreativeData = async () => {
+      try {
+        const apiData = await getCreativeInquire();
+        console.log("Fetched creative data:", apiData);
+
+        const updatedList = bestfolioHomeList.map((item) => {
+          const apiItem = apiData.find((api) => api.creativeId === item.creativeId);
+          return apiItem
+            ? {
+                ...item,
+                name: apiItem.name,
+                view: apiItem.view,
+                like: apiItem.like,
+                viewLogo: <IcView />,
+                greyHeartLogo: <IcGreyHeart />,
+              }
+            : item;
+        });
+
+        setBestfolioList(updatedList);
+      } catch (error) {
+        setError("Failed to fetch creative data.");
+      }
+    };
+
+    fetchCreativeData();
+  }, []);
 
   const toggleHeart = (index: number) => {
     const newHeartedItems = [...heartedItems];
@@ -26,16 +58,20 @@ function BestFolioSection() {
         <NotefolioPick>노트폴리오 픽</NotefolioPick>
         <IcFrameIcon />
       </ToggleBtnSectionContainer>
-      <BestFolioItemContainer>
-        {bestfolioHomeList.map((item, index) => (
-          <BestFolioItem
-            key={item.id}
-            {...item}
-            isHearted={heartedItems[index]}
-            toggleHeart={() => toggleHeart(index)}
-          />
-        ))}
-      </BestFolioItemContainer>
+      {error ? (
+        <ErrorMessage>{error}</ErrorMessage>
+      ) : (
+        <BestFolioItemContainer>
+          {bestfolioList.map((item, index) => (
+            <BestFolioItem
+              key={item.creativeId}
+              {...item}
+              isHearted={heartedItems[index]}
+              toggleHeart={() => toggleHeart(index)}
+            />
+          ))}
+        </BestFolioItemContainer>
+      )}
     </BestFolioSectionWrapper>
   );
 }
@@ -81,4 +117,9 @@ const BestFolioItemContainer = styled.article`
   display: flex;
   column-gap: 2.1rem;
   margin-top: 2.1rem;
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  font-size: 1.2rem;
 `;
