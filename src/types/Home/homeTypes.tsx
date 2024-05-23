@@ -5,16 +5,24 @@ export interface CarouselImgContainerProps {
   transition: boolean;
 }
 
+export interface Creative {
+  name: string;
+  creativeId: number;
+  view: number;
+  like: number;
+}
+
 export interface BestFolioHomeItemProps {
   imgSrc: string;
-  company: string;
+  name: string;
   companyLogo: ReactNode;
-  viewLogo: ReactNode;
-  viewNum: number;
-  heartNum: number;
+  viewLogo?: ReactNode;
+  view: number;
+  like: number;
   greyHeartLogo: ReactNode;
   isHearted: boolean;
   toggleHeart: () => void;
+  creativeId: number;
 }
 
 export interface DesignerRecruitItemProps {

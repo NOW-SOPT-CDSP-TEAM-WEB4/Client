@@ -7,11 +7,11 @@ function BestFolioItem({
   imgSrc,
   isHearted,
   toggleHeart,
-  company,
+  name,
   companyLogo,
   viewLogo,
-  viewNum,
-  heartNum,
+  view,
+  like,
   greyHeartLogo,
 }: BestFolioHomeItemProps) {
   return (
@@ -23,13 +23,13 @@ function BestFolioItem({
       <HomeUnderContainer>
         <HomeLogoContainer>
           {companyLogo}
-          <HomeCompany>{company}</HomeCompany>
+          <HomeCompany>{name}</HomeCompany>
         </HomeLogoContainer>
         <HomeInfoContainer>
           {viewLogo}
-          <HomeView>{viewNum}</HomeView>
+          <HomeView>{view}</HomeView>
           {greyHeartLogo}
-          <HomeHeart>{heartNum}</HomeHeart>
+          <HomeHeart>{like}</HomeHeart>
         </HomeInfoContainer>
       </HomeUnderContainer>
     </BestFolioItemWrapper>

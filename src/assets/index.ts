@@ -1,20 +1,48 @@
+import ImgRecruitBanner from "./img/img_recruit_banner.svg?react";
+import IcArrowDown from "./svg/ic_arrow_down.svg?react";
 import IcCheckLeft from "./svg/ic_check_left.svg?react";
 import IcCheckRight from "./svg/ic_check_right.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
-import IcCsFour from "./svg/ic_cs_four.svg?react";
-import IcCsOne from "./svg/ic_cs_one.svg?react";
-import IcCsThree from "./svg/ic_cs_three.svg?react";
-import IcCsTwo from "./svg/ic_cs_two.svg?react";
+import IcClock from "./svg/ic_clock.svg?react";
 import IcDesign from "./svg/ic_design.svg?react";
+import IcDesignerRecruit1 from "./svg/ic_designer_recruit_1.svg?react";
+import IcDesignerRecruit10 from "./svg/ic_designer_recruit_10.svg?react";
+import IcDesignerRecruit11 from "./svg/ic_designer_recruit_11.svg?react";
+import IcDesignerRecruit2 from "./svg/ic_designer_recruit_2.svg?react";
+import IcDesignerRecruit3 from "./svg/ic_designer_recruit_3.svg?react";
+import IcDesignerRecruit4 from "./svg/ic_designer_recruit_4.svg?react";
+import IcDesignerRecruit5 from "./svg/ic_designer_recruit_5.svg?react";
+import IcDesignerRecruit6 from "./svg/ic_designer_recruit_6.svg?react";
+import IcDesignerRecruit7 from "./svg/ic_designer_recruit_7.svg?react";
+import IcDesignerRecruit8 from "./svg/ic_designer_recruit_8.svg?react";
+import IcDesignerRecruit9 from "./svg/ic_designer_recruit_9.svg?react";
 import IcEmptyHeart from "./svg/ic_empty_heart.svg?react";
+import IcFilter from "./svg/ic_filter.svg?react";
 import IcFloggy from "./svg/ic_floggy.svg?react";
 import IcFrame from "./svg/ic_frame.svg?react";
 import IcGreyHeart from "./svg/ic_grey_heart.svg?react";
 import IcHeart from "./svg/ic_heart.svg?react";
+import IcHeartFilled from "./svg/ic_heart_filled.svg?react";
+import IcHeartOutlined from "./svg/ic_heart_outlined.svg?react";
 import IcJaein from "./svg/ic_JAEIN.svg?react";
 import IcKinder from "./svg/ic_kinder.svg?react";
 import IcKush from "./svg/ic_KUSH.svg?react";
+import IcLogoAuthor1 from "./svg/ic_logo_author_1.svg?react";
+import IcLogoAuthor10 from "./svg/ic_logo_author_10.svg?react";
+import IcLogoAuthor11 from "./svg/ic_logo_author_11.svg?react";
+import IcLogoAuthor12 from "./svg/ic_logo_author_12.svg?react";
+import IcLogoAuthor2 from "./svg/ic_logo_author_2.svg?react";
+import IcLogoAuthor3 from "./svg/ic_logo_author_3.svg?react";
+import IcLogoAuthor4 from "./svg/ic_logo_author_4.svg?react";
+import IcLogoAuthor5 from "./svg/ic_logo_author_5.svg?react";
+import IcLogoAuthor6 from "./svg/ic_logo_author_6.svg?react";
+import IcLogoAuthor7 from "./svg/ic_logo_author_7.svg?react";
+import IcLogoAuthor8 from "./svg/ic_logo_author_8.svg?react";
+import IcLogoAuthor9 from "./svg/ic_logo_author_9.svg?react";
+import IcLogoDailyMorning from "./svg/ic_logo_daily_morning.svg?react";
 import IcLogoSim from "./svg/ic_logo_sim.svg?react";
+import IcLogoStudioEdink from "./svg/ic_logo_studio_edink.svg?react";
+import IcLogoStunning from "./svg/ic_logo_stunning.svg?react";
 import IcLoud from "./svg/ic_loud.svg?react";
 import IcMog from "./svg/ic_mog.svg?react";
 import IcMolly from "./svg/ic_molly.svg?react";
@@ -35,39 +63,67 @@ import IcSearch from "./svg/icons_Search.svg?react";
 import Logo from "./svg/logo.svg?react";
 
 export {
-  Logo,
-  IcMozza,
-  IcKush,
-  IcPindit,
+  IcArrowDown,
   IcStudioKio,
+  IcPindit,
+  IcMozza,
   IcJaein,
-  IcDesign,
+  IcKush,
+  IcLogoAuthor10,
+  IcLogoAuthor11,
+  IcLogoAuthor12,
+  IcLogoAuthor2,
+  IcLogoAuthor3,
+  IcLogoAuthor4,
+  IcLogoAuthor5,
+  IcLogoAuthor6,
+  IcLogoAuthor7,
+  IcLogoAuthor8,
+  IcLogoAuthor9,
+  IcSturning,
+  IcStudioKey,
   IcStudioEdink,
+  IcSpeak,
+  IcDesign,
+  IcFrame,
+  IcEmptyHeart,
+  IcCheckLeft,
+  IcStudio,
+  IcMolly,
+  IcMog,
+  IcKinder,
+  IcGreyHeart,
+  IcFloggy,
   IcCheckWhite,
-  IcNextButton,
+  IcClock,
+  IcCheckRight,
+  IcDesignerRecruit1,
+  IcDesignerRecruit10,
+  IcDesignerRecruit11,
+  IcDesignerRecruit2,
+  IcDesignerRecruit3,
+  IcDesignerRecruit4,
+  IcDesignerRecruit5,
+  IcDesignerRecruit6,
+  IcDesignerRecruit7,
+  IcDesignerRecruit8,
+  IcDesignerRecruit9,
+  IcFilter,
+  IcHeart,
+  IcHeartFilled,
+  IcHeartOutlined,
+  IcLogoAuthor1,
+  IcLogoDailyMorning,
   IcLogoSim,
+  IcLogoStudioEdink,
+  IcLogoStunning,
   IcLoud,
+  IcNew,
+  IcNextButton,
+  IcSearch,
   IcSym,
   IcTopBar,
-  IcSearch,
-  IcNew,
-  IcCsOne,
-  IcCsTwo,
-  IcCsThree,
-  IcCsFour,
-  IcCheckLeft,
-  IcCheckRight,
-  IcFrame,
   IcView,
-  IcGreyHeart,
-  IcHeart,
-  IcEmptyHeart,
-  IcKinder,
-  IcFloggy,
-  IcStudio,
-  IcMog,
-  IcMolly,
-  IcStudioKey,
-  IcSpeak,
-  IcSturning,
+  ImgRecruitBanner,
+  Logo,
 };

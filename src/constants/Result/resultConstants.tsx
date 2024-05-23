@@ -1,0 +1,33 @@
+import {
+  IcLogoAuthor1,
+  IcLogoAuthor10,
+  IcLogoAuthor11,
+  IcLogoAuthor12,
+  IcLogoAuthor2,
+  IcLogoAuthor3,
+  IcLogoAuthor4,
+  IcLogoAuthor5,
+  IcLogoAuthor6,
+  IcLogoAuthor7,
+  IcLogoAuthor8,
+  IcLogoAuthor9,
+} from "../../assets";
+
+export const authorIconList = [
+  <IcLogoAuthor1 key="author1" />,
+  <IcLogoAuthor2 key="author2" />,
+  <IcLogoAuthor3 key="author3" />,
+  <IcLogoAuthor4 key="author4" />,
+  <IcLogoAuthor5 key="author5" />,
+  <IcLogoAuthor6 key="author6" />,
+  <IcLogoAuthor7 key="author7" />,
+  <IcLogoAuthor8 key="author8" />,
+  <IcLogoAuthor3 key="author9" />,
+  <IcLogoAuthor9 key="author10" />,
+  <IcLogoAuthor10 key="author11" />,
+  <IcLogoAuthor11 key="author12" />,
+  <IcLogoAuthor1 key="author13" />,
+  <IcLogoAuthor12 key="author14" />,
+  <IcLogoAuthor12 key="author15" />,
+  <IcLogoAuthor12 key="author16" />,
+];

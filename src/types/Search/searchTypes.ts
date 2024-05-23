@@ -1,6 +1,6 @@
 export interface SearchResultItemProps {
-  isHeart: boolean;
   name: string;
+  creativeId: number;
   view: number;
-  heart: number;
+  like: number;
 }

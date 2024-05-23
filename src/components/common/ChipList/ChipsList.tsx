@@ -1,8 +1,9 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import { styled } from "styled-components";
 
 import { IcNextButton } from "../../../assets";
+import { throttle } from "../../../utils/common/throttle";
 
 import Chip from "./Chip";
 import { ChipsListProps } from "./types/chipsListType";
@@ -41,6 +42,8 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
     setIsEnd(currentScrollPos >= maxScrollLeft);
   };
 
+  const throttledScroll = useMemo(() => throttle(handleScroll, 200), []);
+
   return (
     <ChipsListWrapper>
       {!isStart && <LeftBlurBox />}
@@ -55,7 +58,7 @@ function ChipsList({ chipsTextList }: ChipsListProps) {
           <IcNextButton />
         </RightButton>
       )}
-      <ChipsListBox ref={chipsListBoxRef} onScroll={handleScroll}>
+      <ChipsListBox ref={chipsListBoxRef} onScroll={throttledScroll}>
         {chipsTextList.map((buttonText: string, idx: number) => (
           <Chip
             key={`chip-${idx}`}
