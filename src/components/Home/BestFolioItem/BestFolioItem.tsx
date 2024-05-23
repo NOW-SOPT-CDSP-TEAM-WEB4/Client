@@ -1,34 +1,25 @@
 import { styled } from "styled-components";
 
-import { IcHeart, IcEmptyHeart } from "../../../assets";
+import { IcHeart, IcEmptyHeart, IcView, IcGreyHeart } from "../../../assets";
+import { bestfolioIconList } from "../../../constants/Home/homeConstants";
 import { BestFolioHomeItemProps } from "../../../types/Home/homeTypes";
 
-function BestFolioItem({
-  imgSrc,
-  isHearted,
-  toggleHeart,
-  name,
-  companyLogo,
-  viewLogo,
-  view,
-  like,
-  greyHeartLogo,
-}: BestFolioHomeItemProps) {
+function BestFolioItem({ isHearted, name, view, like, creativeId, toggleHeart }: BestFolioHomeItemProps) {
   return (
     <BestFolioItemWrapper>
       <ImgContainer>
-        <ImgBestFolio src={imgSrc} />
+        <ImgBestFolio src={`/src/assets/img/img_bestfolio_home_${creativeId}.png`} />
         <HeartIcon onClick={toggleHeart}>{isHearted ? <IcHeart /> : <IcEmptyHeart />}</HeartIcon>
       </ImgContainer>
       <HomeUnderContainer>
         <HomeLogoContainer>
-          {companyLogo}
+          {bestfolioIconList[creativeId - 1]}
           <HomeCompany>{name}</HomeCompany>
         </HomeLogoContainer>
         <HomeInfoContainer>
-          {viewLogo}
+          <IcView />
           <HomeView>{view}</HomeView>
-          {greyHeartLogo}
+          <IcGreyHeart />
           <HomeHeart>{like}</HomeHeart>
         </HomeInfoContainer>
       </HomeUnderContainer>

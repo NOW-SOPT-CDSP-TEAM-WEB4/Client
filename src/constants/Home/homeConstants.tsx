@@ -1,50 +1,9 @@
-import { IcMog, IcKinder, IcMolly, IcStudio, IcFloggy, IcView, IcGreyHeart } from "../../assets/index";
+import { IcMog, IcKinder, IcMolly, IcStudio, IcFloggy } from "../../assets/index";
 
-export const bestfolioHomeList = [
-  {
-    creativeId: 1,
-    imgSrc: "/src/assets/img/img_bestfolio_home_1.png",
-    name: "모그 스튜디오",
-    companyLogo: <IcMog />,
-    viewLogo: <IcView />,
-    view: 0,
-    like: 0,
-    greyHeartLogo: <IcGreyHeart />,
-  },
-  {
-    creativeId: 2,
-    imgSrc: "/src/assets/img/img_bestfolio_home_2.png",
-    name: "킨더가든",
-    companyLogo: <IcKinder />,
-    view: 0,
-    like: 0,
-    greyHeartLogo: <IcGreyHeart />,
-  },
-  {
-    creativeId: 3,
-    imgSrc: "/src/assets/img/img_bestfolio_home_3.png",
-    name: "몰리(Molly)",
-    companyLogo: <IcMolly />,
-    view: 0,
-    like: 0,
-    greyHeartLogo: <IcGreyHeart />,
-  },
-  {
-    creativeId: 4,
-    imgSrc: "/src/assets/img/img_bestfolio_home_4.png",
-    name: "스튜디오 디워크",
-    companyLogo: <IcStudio />,
-    view: 0,
-    like: 0,
-    greyHeartLogo: <IcGreyHeart />,
-  },
-  {
-    creativeId: 5,
-    imgSrc: "/src/assets/img/img_bestfolio_home_5.png",
-    name: "Floggy",
-    companyLogo: <IcFloggy />,
-    view: 0,
-    like: 0,
-    greyHeartLogo: <IcGreyHeart />,
-  },
+export const bestfolioIconList = [
+  <IcMog key="1" />,
+  <IcKinder key="2" />,
+  <IcMolly key="3" />,
+  <IcStudio key="4" />,
+  <IcFloggy key="5" />,
 ];
