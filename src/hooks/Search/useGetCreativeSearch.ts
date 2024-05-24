@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import { useSearchParams } from "react-router-dom";
 
+import { getCreativeSearch } from "../../apis/Search/getCreativeSearch";
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
-import { getCreativeSearch } from "../../utils/Search/getCreativeSearch";
 
 export const useGetCreativeSearch = () => {
   const [searchParams] = useSearchParams();

@@ -8,14 +8,17 @@ type ThrottledFunction<T extends (...args: any[]) => any> = {
 
 export const throttle = <T extends (...args: any[]) => any>(func: T, delay: number): ThrottledFunction<T> => {
   let lastCallTime = 0;
-  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  let timeout: ReturnType<typeof setTimeout> | undefined;
 
   const throttled = (...args: Parameters<T>): void => {
     const nowTime = Date.now();
 
     if (nowTime - lastCallTime < delay) {
-      if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = setTimeout(
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+
+      timeout = setTimeout(
         () => {
           lastCallTime = nowTime;
           func(...args);
@@ -29,7 +32,9 @@ export const throttle = <T extends (...args: any[]) => any>(func: T, delay: numb
   };
 
   throttled.cancel = () => {
-    if (timeoutId) clearTimeout(timeoutId);
+    if (timeout) {
+      clearTimeout(timeout);
+    }
   };
 
   return throttled;
