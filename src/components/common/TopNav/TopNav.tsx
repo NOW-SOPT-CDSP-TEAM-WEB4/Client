@@ -88,6 +88,8 @@ const TopNavWrapper = styled.section`
   border-color: ${({ theme }) => theme.colors.g06};
 
   background-color: ${({ theme }) => theme.colors.w01};
+
+  z-index: 1;
 `;
 
 const LeftContainer = styled.section`
