@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { IcArrowleftRg, IcArrowrightRg } from "../../../assets";
 import { carouselTemList } from "../../../constants/Community/communityConstants";
@@ -80,14 +80,13 @@ function CommunityCarousel() {
 export default CommunityCarousel;
 
 const CommunityCarouselWrapper = styled.div`
+  overflow: hidden;
   position: relative;
 
   width: 100%;
   height: 100%;
 
   border-radius: 1.2rem;
-
-  overflow: hidden;
 `;
 
 // 같이 export 된 이미지 말고 따로 쓸 때 사용!!
@@ -117,56 +116,46 @@ const CommunityCarouselWrapper = styled.div`
 //   z-index: 2;
 // `;
 
-const ItemNum = styled.div`
-  display: flex;
+const ItemNum = styled.span`
   position: absolute;
-
-  margin: 42rem 0 0 76rem;
+  right: 4rem;
+  bottom: 4.2rem;
+  z-index: 2;
 
   ${({ theme }) => theme.fonts.Bold14_22};
   color: ${({ theme }) => theme.colors.w01};
-
-  writing-mode: horizontal-tb;
-  z-index: 2;
-  overflow: hidden;
 `;
 
 const SwipeLeft = styled.button`
   display: block;
   position: absolute;
-
-  padding: 1.3rem;
+  top: 45%;
+  left: 0;
+  z-index: 1;
   width: 4.2rem;
   height: 4.2rem;
-  left: 0;
-  top: 45%;
-
+  padding: 1.3rem;
   border: 0.1rem solid;
-  border-radius: 2.1rem;
-  border-color: ${({ theme }) => theme.colors.g03};
 
   background-color: ${({ theme }) => theme.colors.w01};
-
-  z-index: 1;
+  border-radius: 2.1rem;
+  border-color: ${({ theme }) => theme.colors.g03};
 `;
 
 const SwipeRight = styled.button`
   display: block;
   position: absolute;
-
-  padding: 1.3rem;
+  top: 45%;
+  right: 0;
+  z-index: 2;
   width: 4.2rem;
   height: 4.2rem;
-  right: 0;
-  top: 45%;
-
+  padding: 1.3rem;
   border: 0.1rem solid;
-  border-radius: 2.1rem;
-  border-color: ${({ theme }) => theme.colors.g03};
 
   background-color: ${({ theme }) => theme.colors.w01};
-
-  z-index: 2;
+  border-radius: 2.1rem;
+  border-color: ${({ theme }) => theme.colors.g03};
 `;
 
 const Carousel = styled.section`
@@ -174,7 +163,7 @@ const Carousel = styled.section`
 `;
 
 const CarouselItem = styled.section`
-  display: flex;
+  position: relative;
 `;
 
 const CarouselImg = styled.img`
