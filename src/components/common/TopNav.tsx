@@ -29,13 +29,11 @@ function TopNav() {
           <Logo />
         </HomeBtn>
         <BtnContainer>
-          <NavBtn type="button" onClick={() => navigate("/community")}>
-            발견
-          </NavBtn>
+          <NavBtn type="button">발견</NavBtn>
           <NavBtn type="button" onClick={() => navigate("/recruit")}>
             채용
           </NavBtn>
-          <NavBtn type="button" onClick={() => navigate("/search")}>
+          <NavBtn type="button" onClick={() => navigate("/community")}>
             성장/커뮤니티
             <IcNewIcon />
           </NavBtn>
