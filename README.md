@@ -3,8 +3,8 @@
 # 노트폴리오 👨🏻‍🎨
 
 
-**NOW SOPT WEB TEAM 4**
 <br />
+
 ![image](https://github.com/NOW-SOPT-CDSP-TEAM-WEB4/Notefolio-Client/assets/60962533/c7d36a27-dce1-4dcf-8633-5d8abd11099b)
 
 </div>
