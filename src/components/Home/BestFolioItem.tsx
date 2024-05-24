@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 import { IcEmptyHeart, IcGreyHeart, IcHeart, IcView } from "../../assets";
-import { bestfolioIconList } from "../../constants/Home/homeConstants";
+import { bestFolioImgList, bestfolioIconList } from "../../constants/Home/homeConstants";
 import { BestFolioHomeItemProps } from "../../types/Home/homeTypes";
 
 function BestFolioItem({ isLike, name, view, like, creativeId, toggleHeart }: BestFolioHomeItemProps) {
   return (
     <BestFolioItemWrapper>
       <ImgContainer>
-        <ImgBestFolio src={`/src/assets/img/img_bestfolio_home_${creativeId}.png`} />
+        <ImgBestFolio src={bestFolioImgList[creativeId - 1]} />
         <HeartIcon onClick={toggleHeart}>{isLike ? <IcHeart /> : <IcEmptyHeart />}</HeartIcon>
       </ImgContainer>
       <HomeUnderContainer>

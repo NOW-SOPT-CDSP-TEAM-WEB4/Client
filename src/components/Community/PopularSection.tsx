@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
 import { getWorkshop } from "../../apis/Community/getWorkshop";
+import ImgPopularBottom from "../../assets/img/img_popular_bottom.png";
 import { WorkshopItemProps } from "../../types/Community/communityProps";
 
 import PopularItem from "./PopularItem";
@@ -36,7 +37,7 @@ function PopularSection() {
           <PopularItem key={item.workshopId} {...item} />
         ))}
       </PopularContainer>
-      <BottomImg src={"/src/assets/img/img_popular_bottom.png"} />
+      <BottomImg src={ImgPopularBottom} />
     </PopularSectionWrapper>
   );
 }

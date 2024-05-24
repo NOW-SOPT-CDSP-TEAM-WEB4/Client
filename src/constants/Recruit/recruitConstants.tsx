@@ -14,11 +14,25 @@ import {
   IcLogoStudioEdink,
   IcLogoStunning,
 } from "../../assets";
+import ImgActiveRecruit1 from "../../assets/img/img_active_recruit_1.png";
+import ImgActiveRecruit2 from "../../assets/img/img_active_recruit_2.png";
+import ImgActiveRecruit3 from "../../assets/img/img_active_recruit_3.png";
+import ImgDesignerRecruit1 from "../../assets/img/img_designer_recruit_1.png";
+import ImgDesignerRecruit10 from "../../assets/img/img_designer_recruit_10.png";
+import ImgDesignerRecruit11 from "../../assets/img/img_designer_recruit_11.png";
+import ImgDesignerRecruit2 from "../../assets/img/img_designer_recruit_2.png";
+import ImgDesignerRecruit3 from "../../assets/img/img_designer_recruit_3.png";
+import ImgDesignerRecruit4 from "../../assets/img/img_designer_recruit_4.png";
+import ImgDesignerRecruit5 from "../../assets/img/img_designer_recruit_5.png";
+import ImgDesignerRecruit6 from "../../assets/img/img_designer_recruit_6.png";
+import ImgDesignerRecruit7 from "../../assets/img/img_designer_recruit_7.png";
+import ImgDesignerRecruit8 from "../../assets/img/img_designer_recruit_8.png";
+import ImgDesignerRecruit9 from "../../assets/img/img_designer_recruit_9.png";
 
 export const activeRecruitList = [
   {
     id: 0,
-    imgSrc: "/src/assets/img/img_active_recruit_1.png",
+    imgSrc: ImgActiveRecruit1,
     position: "인턴",
     title: "노트폴리오 콘텐츠 팀 채용",
     place: "서울시 마포구",
@@ -29,7 +43,7 @@ export const activeRecruitList = [
   },
   {
     id: 1,
-    imgSrc: "/src/assets/img/img_active_recruit_2.png",
+    imgSrc: ImgActiveRecruit2,
     position: "경력(2년~6년)",
     title: "그래픽 편집 디자이너 채용",
     place: "서울시 송파구",
@@ -40,7 +54,7 @@ export const activeRecruitList = [
   },
   {
     id: 2,
-    imgSrc: "/src/assets/img/img_active_recruit_3.png",
+    imgSrc: ImgActiveRecruit3,
     position: "경력 무관",
     title: "그래픽디자이너 채용",
     place: "서울시 마포구",
@@ -74,7 +88,7 @@ export const chipsTextList = [
 export const designerRecruitList = [
   {
     id: 0,
-    imgSrc: "/src/assets/img/img_designer_recruit_1.png",
+    imgSrc: ImgDesignerRecruit1,
     position: "경력 무관",
     title: "위마트 디자이너",
     place: "서울시 광진구",
@@ -84,7 +98,7 @@ export const designerRecruitList = [
   },
   {
     id: 1,
-    imgSrc: "/src/assets/img/img_designer_recruit_2.png",
+    imgSrc: ImgDesignerRecruit2,
     position: "경력 무관",
     title: "프레젠테이션(PPT) 디자이 모집",
     place: "서울시 구로구",
@@ -94,7 +108,7 @@ export const designerRecruitList = [
   },
   {
     id: 2,
-    imgSrc: "/src/assets/img/img_designer_recruit_3.png",
+    imgSrc: ImgDesignerRecruit3,
     position: "경력(3년~7년)",
     title: "디자이너 채용",
     place: "광주광역시 북구",
@@ -104,7 +118,7 @@ export const designerRecruitList = [
   },
   {
     id: 3,
-    imgSrc: "/src/assets/img/img_designer_recruit_4.png",
+    imgSrc: ImgDesignerRecruit4,
     position: "경력 무관",
     title: "그래픽디자이너 채용",
     place: "서울시 마포구",
@@ -114,7 +128,7 @@ export const designerRecruitList = [
   },
   {
     id: 4,
-    imgSrc: "/src/assets/img/img_designer_recruit_5.png",
+    imgSrc: ImgDesignerRecruit5,
     position: "경력 무관",
     title: "코엑스 브랜드 디자인 담당 채용",
     place: "서울시 강남구",
@@ -124,7 +138,7 @@ export const designerRecruitList = [
   },
   {
     id: 5,
-    imgSrc: "/src/assets/img/img_designer_recruit_6.png",
+    imgSrc: ImgDesignerRecruit6,
     position: "경력 무관",
     title: "슈피겐코리아 경력 및 채용연계...",
     place: "서울시 강남구",
@@ -134,7 +148,7 @@ export const designerRecruitList = [
   },
   {
     id: 6,
-    imgSrc: "/src/assets/img/img_designer_recruit_7.png",
+    imgSrc: ImgDesignerRecruit7,
     position: "경력(1년~2년)",
     title: "시각디자이너 채용",
     place: "재택근무",
@@ -144,7 +158,7 @@ export const designerRecruitList = [
   },
   {
     id: 7,
-    imgSrc: "/src/assets/img/img_designer_recruit_8.png",
+    imgSrc: ImgDesignerRecruit8,
     position: "경력(3년~9년)",
     title: "출판 편집 디자이너 채용",
     place: "서울시 서초구",
@@ -154,7 +168,7 @@ export const designerRecruitList = [
   },
   {
     id: 8,
-    imgSrc: "/src/assets/img/img_designer_recruit_9.png",
+    imgSrc: ImgDesignerRecruit9,
     position: "경력 무관",
     title: "컨텐츠 디자이너 채용",
     place: "서울시 강남구",
@@ -164,7 +178,7 @@ export const designerRecruitList = [
   },
   {
     id: 9,
-    imgSrc: "/src/assets/img/img_designer_recruit_10.png",
+    imgSrc: ImgDesignerRecruit10,
     position: "인턴",
     title: "노트폴리오 콘텐 매니저(인턴)...",
     place: "서울시 마포구",
@@ -174,7 +188,7 @@ export const designerRecruitList = [
   },
   {
     id: 10,
-    imgSrc: "/src/assets/img/img_designer_recruit_11.png",
+    imgSrc: ImgDesignerRecruit11,
     position: "경력(3년~6년)",
     title: "경력 UI/UX 디자이너 채용",
     place: "서울시 영등포구",
@@ -184,7 +198,7 @@ export const designerRecruitList = [
   },
   {
     id: 11,
-    imgSrc: "/src/assets/img/img_designer_recruit_11.png",
+    imgSrc: ImgDesignerRecruit11,
     position: "신입",
     title: "신입 UI/UX 디자이너 채용",
     place: "서울시 영등포구",

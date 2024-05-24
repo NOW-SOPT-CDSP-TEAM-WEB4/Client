@@ -1,12 +1,13 @@
 import { styled } from "styled-components";
 
+import { popularImgList } from "../../constants/Community/communityConstants";
 import { WorkshopItemProps } from "../../types/Community/communityProps";
 
 function PopularItem({ workshopId, title, content, date, online }: WorkshopItemProps) {
   return (
     <PopularItemWrapper>
       <PopularItemContainer>
-        <PopularImg src={`/src/assets/img/img_popular_${workshopId}.png`} />
+        <PopularImg src={popularImgList[workshopId - 1]} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>
