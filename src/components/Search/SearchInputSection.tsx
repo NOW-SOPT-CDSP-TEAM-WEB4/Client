@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { useSearchParams } from "react-router-dom";
 import { styled } from "styled-components";
 
 import { IcArrowDown, IcFilter, IcSearch } from "../../assets";
+import { debounce } from "../../utils/debounce";
 
 function SearchInputSection() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -23,14 +24,15 @@ function SearchInputSection() {
     }
   };
 
+  const debouncedHandleChangeSearchInput = useCallback(debounce(handleChangeSearchInput, 300), []);
+
   return (
     <SearchInputSectionWrapper>
       <SearchInputWrapper>
         <StyledIcSearch />
         <SearchInput
           placeholder="190,000개 이상의 크리에이티브 검색"
-          value={searchWord}
-          onChange={handleChangeSearchInput}
+          onChange={debouncedHandleChangeSearchInput}
           onKeyDown={(e) => handleKeyDownEnter(e)}
         />
         <GreyBar />
