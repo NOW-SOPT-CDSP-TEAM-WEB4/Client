@@ -68,6 +68,8 @@ const LabelBox = styled.section`
   ${({ theme }) => theme.fonts.SemiBold14_22};
 
   background-color: ${({ theme }) => theme.colors.w01};
+
+  letter-spacing: -0.025rem;
 `;
 
 const IcArrowrightRgIcon = styled(IcArrowrightRg)`
@@ -94,6 +96,8 @@ const Content = styled.article`
   color: ${({ theme }) => theme.colors.b04};
 
   ${({ theme }) => theme.fonts.Medium14_22};
+
+  letter-spacing: -0.025rem;
 `;
 
 const ImgContainer = styled.div`

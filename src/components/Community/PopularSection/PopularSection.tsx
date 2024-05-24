@@ -1,38 +1,39 @@
-import styled from "styled-components";
+import { useState, useEffect } from "react";
+
+import { styled } from "styled-components";
+
+import { getWorkshop } from "../../../apis/Community/getWorkshop";
+import { WorkshopItemProps } from "../../../types/Community/communityProps";
 
 import PopularItem from "./PopularItem";
 
 function PopularSection() {
-  const popularWorkshop = [
-    {
-      title: "캐릭터 브랜딩 실무 워크숍 (입문반)",
-      content: "캐릭터 디자인의 기초 + 가이드북 완성까지! ",
-      date: "2022/01/30 (5시)",
-      online: true,
-      src: "/src/assets/img/img_popular1.png",
-    },
-    {
-      title: "제목2",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: false,
-      src: "/src/assets/img/img_popular2.png",
-    },
-    {
-      title: "제목3",
-      content: "내용이 들어갑니다~",
-      date: "2022/01/30 (5시)",
-      online: true,
-      src: "/src/assets/img/img_popular3.png",
-    },
-  ];
+  const [workshopList, setWorkshopList] = useState<WorkshopItemProps[]>([]);
+
+  useEffect(() => {
+    const getWorkshopList = async () => {
+      try {
+        const apiGet = await getWorkshop();
+        const newList = [];
+        for (let i = 0; i < 3; i++) {
+          const apiItem = apiGet.find((api: WorkshopItemProps) => api.workshopId === i + 1);
+          newList.push(apiItem);
+        }
+        setWorkshopList(newList);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getWorkshopList();
+  }, []);
 
   return (
     <PopularSectionWrapper>
       <Title>전 기수 조기 완판! 인기 워크숍</Title>
       <PopularContainer>
-        {popularWorkshop.map((item) => (
-          <PopularItem key={item.title} {...item} />
+        {workshopList.map((item) => (
+          <PopularItem key={item.workshopId} {...item} />
         ))}
       </PopularContainer>
       <BottomImg src={"/src/assets/img/img_popular_bottom.png"} />
