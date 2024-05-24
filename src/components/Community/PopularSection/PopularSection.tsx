@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import styled from "styled-components";
+import { styled } from "styled-components";
 
 import { getWorkshop } from "../../../apis/Community/getWorkshop";
 import { WorkshopItemProps } from "../../../types/Community/communityProps";
@@ -16,7 +16,7 @@ function PopularSection() {
         const apiGet = await getWorkshop();
         const newList = [];
         for (let i = 0; i < 3; i++) {
-          const apiItem = apiGet.find((api: WorkshopItemProps) => api);
+          const apiItem = apiGet.find((api: WorkshopItemProps) => api.workshopId === i + 1);
           newList.push(apiItem);
         }
         setWorkshopList(newList);
@@ -33,7 +33,7 @@ function PopularSection() {
       <Title>전 기수 조기 완판! 인기 워크숍</Title>
       <PopularContainer>
         {workshopList.map((item) => (
-          <PopularItem key={item.title} {...item} />
+          <PopularItem key={item.workshopId} {...item} />
         ))}
       </PopularContainer>
       <BottomImg src={"/src/assets/img/img_popular_bottom.png"} />
