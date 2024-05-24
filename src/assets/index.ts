@@ -1,5 +1,17 @@
+import ImgCommuity from "./img/img_community.svg?react";
+import ImgContents from "./img/img_contents.svg?react";
+import ImgDesign from "./img/img_design.svg?react";
+import ImgFree from "./img/img_free.svg?react";
+import ImgHouse from "./img/img_house.svg?react";
+import ImgOpen from "./img/img_open.svg?react";
+import ImgPort from "./img/img_port.svg?react";
+import ImgProject from "./img/img_project.svg?react";
 import ImgRecruitBanner from "./img/img_recruit_banner.svg?react";
+import ImgSide from "./img/img_side.svg?react";
+import ImgWorkIm from "./img/img_work_im.svg?react";
+import ImgWorkshop from "./img/img_workshop.svg?react";
 import IcArrowDown from "./svg/ic_arrow_down.svg?react";
+import IcArrowrightRg from "./svg/ic_arrowright_rg.svg?react";
 import IcCheckLeft from "./svg/ic_check_left.svg?react";
 import IcCheckRight from "./svg/ic_check_right.svg?react";
 import IcCheckWhite from "./svg/ic_check_white.svg?react";
@@ -58,45 +70,22 @@ import IcSturning from "./svg/ic_sturning.svg?react";
 import IcSym from "./svg/ic_sym.svg?react";
 import IcTopBar from "./svg/ic_top_bar.svg?react";
 import IcView from "./svg/ic_view.svg?react";
+import IcArrowdownSm from "./svg/icons_arrowdown_sm.svg?react";
+import IcArrowleftRg from "./svg/icons_arrowleft_rg.svg?react";
 import IcNew from "./svg/icons_New.svg?react";
 import IcSearch from "./svg/icons_Search.svg?react";
 import Logo from "./svg/logo.svg?react";
 
 export {
   IcArrowDown,
-  IcStudioKio,
-  IcPindit,
-  IcMozza,
-  IcJaein,
-  IcKush,
-  IcLogoAuthor10,
-  IcLogoAuthor11,
-  IcLogoAuthor12,
-  IcLogoAuthor2,
-  IcLogoAuthor3,
-  IcLogoAuthor4,
-  IcLogoAuthor5,
-  IcLogoAuthor6,
-  IcLogoAuthor7,
-  IcLogoAuthor8,
-  IcLogoAuthor9,
-  IcSturning,
-  IcStudioKey,
-  IcStudioEdink,
-  IcSpeak,
-  IcDesign,
-  IcFrame,
-  IcEmptyHeart,
+  IcArrowdownSm,
+  IcArrowleftRg,
+  IcArrowrightRg,
   IcCheckLeft,
-  IcStudio,
-  IcMolly,
-  IcMog,
-  IcKinder,
-  IcGreyHeart,
-  IcFloggy,
+  IcCheckRight,
   IcCheckWhite,
   IcClock,
-  IcCheckRight,
+  IcDesign,
   IcDesignerRecruit1,
   IcDesignerRecruit10,
   IcDesignerRecruit11,
@@ -108,22 +97,61 @@ export {
   IcDesignerRecruit7,
   IcDesignerRecruit8,
   IcDesignerRecruit9,
+  IcEmptyHeart,
   IcFilter,
+  IcFloggy,
+  IcFrame,
+  IcGreyHeart,
   IcHeart,
   IcHeartFilled,
   IcHeartOutlined,
+  IcJaein,
+  IcKinder,
+  IcKush,
   IcLogoAuthor1,
+  IcLogoAuthor10,
+  IcLogoAuthor11,
+  IcLogoAuthor12,
+  IcLogoAuthor2,
+  IcLogoAuthor3,
+  IcLogoAuthor4,
+  IcLogoAuthor5,
+  IcLogoAuthor6,
+  IcLogoAuthor7,
+  IcLogoAuthor8,
+  IcLogoAuthor9,
   IcLogoDailyMorning,
   IcLogoSim,
   IcLogoStudioEdink,
   IcLogoStunning,
   IcLoud,
+  IcMog,
+  IcMolly,
+  IcMozza,
   IcNew,
   IcNextButton,
+  IcPindit,
   IcSearch,
+  IcSpeak,
+  IcStudio,
+  IcStudioEdink,
+  IcStudioKey,
+  IcStudioKio,
+  IcSturning,
   IcSym,
   IcTopBar,
   IcView,
+  ImgCommuity,
+  ImgContents,
+  ImgDesign,
+  ImgFree,
+  ImgHouse,
+  ImgOpen,
+  ImgPort,
+  ImgProject,
   ImgRecruitBanner,
+  ImgSide,
+  ImgWorkIm,
+  ImgWorkshop,
   Logo,
 };

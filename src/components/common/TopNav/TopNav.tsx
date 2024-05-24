@@ -75,19 +75,19 @@ const TopNavWrapper = styled.section`
   display: flex;
   position: sticky;
   top: 0;
-  z-index: 2;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
+  z-index: 1;
 
   width: 100%;
   height: 5.6rem;
   padding: 0 2.4rem 0 2.27rem;
 
+  background-color: ${({ theme }) => theme.colors.w01};
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
   border-bottom: 0.1rem solid;
   border-color: ${({ theme }) => theme.colors.g06};
-
-  background-color: ${({ theme }) => theme.colors.w01};
 `;
 
 const LeftContainer = styled.section`
