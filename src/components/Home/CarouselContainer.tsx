@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { styled } from "styled-components";
 
@@ -50,7 +50,7 @@ function CarouselContainer() {
     <CarouselContainerWrapper>
       <CarouselImgContainer offset={offset} transition={transition} onTransitionEnd={handleTransitionEnd}>
         {totalImages.map((src, index) => (
-          <CarouselImage src={src} alt={`Slide ${index}`} key={index} />
+          <CarouselImage src={import.meta.env.VITE_DOMAIN + src} alt={`Slide ${index}`} key={index} />
         ))}
       </CarouselImgContainer>
       <LeftButton onClick={handleLeftClick}>

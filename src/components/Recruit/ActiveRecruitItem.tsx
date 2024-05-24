@@ -15,7 +15,7 @@ function ActiveRecruitItem({
 }: ActiveRecruitItemProps) {
   return (
     <ActiveRecruitItemWrapper>
-      <ImgActiveRecruit src={imgSrc} />
+      <ImgActiveRecruit src={import.meta.env.VITE_DOMAIN + imgSrc} />
       <RecruitInfoContainer>
         <RecruitPosition>{position}</RecruitPosition>
         <RecruitTitle>{title}</RecruitTitle>

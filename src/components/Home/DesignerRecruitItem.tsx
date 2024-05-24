@@ -5,7 +5,7 @@ import { DesignerRecruitItemProps } from "../../types/Home/homeTypes";
 function DesignerRecruitItem({ imgSrc, title, companyLogo, company }: DesignerRecruitItemProps) {
   return (
     <DesignerRecruitItemWrapper>
-      <ImgDesignRecruit src={imgSrc} />
+      <ImgDesignRecruit src={import.meta.env.VITE_DOMAIN + imgSrc} />
       <InfoContainer>
         {companyLogo}
         <RecruitLetterContainer>

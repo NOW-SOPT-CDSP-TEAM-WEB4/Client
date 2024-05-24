@@ -7,7 +7,7 @@ import { SearchResultItemProps } from "../../types/Search/searchTypes";
 function SearchResultItem({ name, creativeId, view, like }: SearchResultItemProps) {
   return (
     <SearchResultItemWrapper>
-      <SearchResultItemImg src={`/src/assets/img/img_search_result_${creativeId}.png`} />
+      <SearchResultItemImg src={import.meta.env.VITE_DOMAIN + `/src/assets/img/img_search_result_${creativeId}.png`} />
       <SearchResultInfo>
         <AuthorInfo>
           {authorIconList[creativeId - 1]}

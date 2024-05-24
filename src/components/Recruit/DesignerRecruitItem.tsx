@@ -14,7 +14,7 @@ function DesignerRecruitItem({
 }: DesignerRecruitItemProps) {
   return (
     <DesignerRecruitItemWrapper>
-      <ImgDesignerRecruit src={imgSrc} />
+      <ImgDesignerRecruit src={import.meta.env.VITE_DOMAIN + imgSrc} />
       <DesignerRecruitInfoContainer>
         <DesignerRecruitPosition>{position}</DesignerRecruitPosition>
         <DesignerRecruitTitle>{title}</DesignerRecruitTitle>

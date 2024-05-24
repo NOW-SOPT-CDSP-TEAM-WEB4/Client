@@ -64,7 +64,7 @@ function CommunityCarousel() {
       <Carousel ref={carouselRef}>
         {currList.map((item) => (
           <CarouselItem key={item.itemId}>
-            <CarouselImg src={item.src} />
+            <CarouselImg src={import.meta.env.VITE_DOMAIN + item.src} />
             {/* <Title>{item.title}</Title>
             <Content>{item.content}</Content> */}
             <ItemNum>
