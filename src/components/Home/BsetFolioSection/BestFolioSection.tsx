@@ -2,38 +2,23 @@ import { useState, useEffect } from "react";
 
 import { styled } from "styled-components";
 
+import { deleteCreativeLike } from "../../../apis/Home/deleteCreativeLike"; // Ensure this import exists
 import { getCreativeInquire } from "../../../apis/Home/getCreativeInquire";
-import { IcFrame, IcView, IcGreyHeart } from "../../../assets/index";
-import { bestfolioHomeList } from "../../../constants/Home/homeConstants";
+import { postCreativeLike } from "../../../apis/Home/postCreativeLike";
+import { IcFrame } from "../../../assets/index";
 import ChipsList from "../../common/ChipList/ChipsList";
 import { chipsTextList } from "../../common/ChipList/HoemChipsTextList";
 import BestFolioItem from "../BestFolioItem/BestFolioItem";
 
 function BestFolioSection() {
-  const [bestfolioList, setBestfolioList] = useState(bestfolioHomeList);
-  const [heartedItems, setHeartedItems] = useState(new Array(bestfolioHomeList.length).fill(false));
+  const [bestfolioList, setBestfolioList] = useState([{ name: "", view: -1, like: -1, creativeId: -1, isLike: false }]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchCreativeData = async () => {
       try {
         const apiData = await getCreativeInquire();
-
-        const updatedList = bestfolioHomeList.map((item) => {
-          const apiItem = apiData.find((api) => api.creativeId === item.creativeId);
-          return apiItem
-            ? {
-                ...item,
-                name: apiItem.name,
-                view: apiItem.view,
-                like: apiItem.like,
-                viewLogo: <IcView />,
-                greyHeartLogo: <IcGreyHeart />,
-              }
-            : item;
-        });
-
-        setBestfolioList(updatedList);
+        setBestfolioList(apiData);
       } catch (error) {
         setError("Failed to fetch creative data.");
       }
@@ -42,10 +27,27 @@ function BestFolioSection() {
     fetchCreativeData();
   }, []);
 
-  const toggleHeart = (index: number) => {
-    const newHeartedItems = [...heartedItems];
-    newHeartedItems[index] = !newHeartedItems[index];
-    setHeartedItems(newHeartedItems);
+  const toggleHeart = async (index: number) => {
+    try {
+      const { creativeId, isLike } = bestfolioList[index];
+      let response;
+
+      if (isLike) {
+        response = await deleteCreativeLike(creativeId);
+      } else {
+        response = await postCreativeLike(creativeId);
+      }
+
+      if (response.status === 200 || response.status === 201) {
+        const updatedList = await getCreativeInquire();
+        setBestfolioList(updatedList);
+      } else {
+        throw new Error("하트를 토글하는데 실패했습니다.");
+      }
+    } catch (error) {
+      console.error("Toggle Heart Error:", error);
+      setError("하트를 토글하는데 실패했습니다.");
+    }
   };
 
   return (
@@ -62,12 +64,7 @@ function BestFolioSection() {
       ) : (
         <BestFolioItemContainer>
           {bestfolioList.map((item, index) => (
-            <BestFolioItem
-              key={item.creativeId}
-              {...item}
-              isHearted={heartedItems[index]}
-              toggleHeart={() => toggleHeart(index)}
-            />
+            <BestFolioItem key={item.creativeId} {...item} toggleHeart={() => toggleHeart(index)} />
           ))}
         </BestFolioItemContainer>
       )}

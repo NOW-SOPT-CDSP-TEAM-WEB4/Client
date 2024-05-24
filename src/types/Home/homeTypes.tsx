@@ -10,17 +10,14 @@ export interface Creative {
   creativeId: number;
   view: number;
   like: number;
+  isLike: boolean;
 }
 
 export interface BestFolioHomeItemProps {
-  imgSrc: string;
   name: string;
-  companyLogo: ReactNode;
-  viewLogo?: ReactNode;
   view: number;
   like: number;
-  greyHeartLogo: ReactNode;
-  isHearted: boolean;
+  isLike: boolean;
   toggleHeart: () => void;
   creativeId: number;
 }
