@@ -1,15 +1,13 @@
 import { styled } from "styled-components";
 
 import { IcGreyHeart, IcView } from "../../assets";
-import { authorIconList } from "../../constants/Result/resultConstants";
+import { authorIconList, searchResultImageList } from "../../constants/Search/resultConstants";
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
-import { getImagePath } from "../../utils/getImagePath";
 
 function SearchResultItem({ name, creativeId, view, like }: SearchResultItemProps) {
-  const imagePath = getImagePath("img_search_result", creativeId);
   return (
     <SearchResultItemWrapper>
-      <SearchResultItemImg src={imagePath} />
+      <SearchResultItemImg src={searchResultImageList[creativeId - 1]} />
       <SearchResultInfo>
         <AuthorInfo>
           {authorIconList[creativeId - 1]}
