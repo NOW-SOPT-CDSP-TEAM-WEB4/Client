@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { IcHeart, IcView } from "../../assets";
+import { IcGreyHeart, IcView } from "../../assets";
 import { authorIconList } from "../../constants/Result/resultConstants";
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
 
@@ -19,7 +19,7 @@ function SearchResultItem({ name, creativeId, view, like }: SearchResultItemProp
             <ViewCount>{view}</ViewCount>
           </ViewInfo>
           <HeartInfo>
-            <IcHeart />
+            <IcGreyHeart />
             <HeartCount>{like}</HeartCount>
           </HeartInfo>
         </DataInfo>
