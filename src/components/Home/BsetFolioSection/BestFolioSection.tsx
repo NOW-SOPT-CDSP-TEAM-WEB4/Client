@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { styled } from "styled-components";
 
+import { deleteCreativeLike } from "../../../apis/Home/deleteCreativeLike"; // Ensure this import exists
 import { getCreativeInquire } from "../../../apis/Home/getCreativeInquire";
 import { postCreativeLike } from "../../../apis/Home/postCreativeLike";
 import { IcFrame } from "../../../assets/index";
@@ -10,9 +11,7 @@ import { chipsTextList } from "../../common/ChipList/HoemChipsTextList";
 import BestFolioItem from "../BestFolioItem/BestFolioItem";
 
 function BestFolioSection() {
-  const [bestfolioList, setBestfolioList] = useState([
-    { name: "", view: -1, like: -1, creativeId: -1, isHearted: false },
-  ]);
+  const [bestfolioList, setBestfolioList] = useState([{ name: "", view: -1, like: -1, creativeId: -1, isLike: false }]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,9 +29,16 @@ function BestFolioSection() {
 
   const toggleHeart = async (index: number) => {
     try {
-      const creativeId = bestfolioList[index].creativeId;
-      const response = await postCreativeLike(creativeId);
-      if (response.status === 201 && response.success) {
+      const { creativeId, isLike } = bestfolioList[index];
+      let response;
+
+      if (isLike) {
+        response = await deleteCreativeLike(creativeId);
+      } else {
+        response = await postCreativeLike(creativeId);
+      }
+
+      if (response.status === 200 || response.status === 201) {
         const updatedList = await getCreativeInquire();
         setBestfolioList(updatedList);
       } else {
@@ -57,8 +63,8 @@ function BestFolioSection() {
         <ErrorMessage>{error}</ErrorMessage>
       ) : (
         <BestFolioItemContainer>
-          {bestfolioList.map((item) => (
-            <BestFolioItem key={item.creativeId} {...item} toggleHeart={() => toggleHeart(item.creativeId)} />
+          {bestfolioList.map((item, index) => (
+            <BestFolioItem key={item.creativeId} {...item} toggleHeart={() => toggleHeart(index)} />
           ))}
         </BestFolioItemContainer>
       )}

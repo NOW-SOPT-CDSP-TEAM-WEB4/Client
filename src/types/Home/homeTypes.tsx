@@ -10,14 +10,14 @@ export interface Creative {
   creativeId: number;
   view: number;
   like: number;
-  isHearted: boolean;
+  isLike: boolean;
 }
 
 export interface BestFolioHomeItemProps {
   name: string;
   view: number;
   like: number;
-  isHearted: boolean;
+  isLike: boolean;
   toggleHeart: () => void;
   creativeId: number;
 }
