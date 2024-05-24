@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { NotefolioRecommendItemProps } from "../../../types/Home/homeTypes";
+import { NotefolioRecommendItemProps } from "../../types/Home/homeTypes";
 
 function NotefolioRecommendItem({ imgSrc, companyLogo, company, content }: NotefolioRecommendItemProps) {
   return (
@@ -25,12 +25,13 @@ export default NotefolioRecommendItem;
 
 const NotefolioRecommendItemWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   width: 23.1rem;
   height: 17.1rem;
-  padding: 2.3175rem;
   margin-bottom: 4.5rem;
+  padding: 2.3175rem;
+
   background-color: ${({ theme }) => theme.colors.w01};
+  flex-direction: column;
 `;
 
 const NotefolioRecommendItemTopContainer = styled.div`

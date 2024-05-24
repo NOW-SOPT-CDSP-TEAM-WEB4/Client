@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { styled } from "styled-components";
 
-import { deleteCreativeLike } from "../../../apis/Home/deleteCreativeLike"; // Ensure this import exists
-import { getCreativeInquire } from "../../../apis/Home/getCreativeInquire";
-import { postCreativeLike } from "../../../apis/Home/postCreativeLike";
-import { IcFrame } from "../../../assets/index";
-import ChipsList from "../../common/ChipList/ChipsList";
-import { chipsTextList } from "../../common/ChipList/HoemChipsTextList";
-import BestFolioItem from "../BestFolioItem/BestFolioItem";
+import { deleteCreativeLike } from "../../apis/Home/deleteCreativeLike";
+import { getCreativeInquire } from "../../apis/Home/getCreativeInquire";
+import { postCreativeLike } from "../../apis/Home/postCreativeLike";
+import { IcFrame } from "../../assets/index";
+import { chipsTextList } from "../../constants/Home/HomeChipsTextList";
+import ChipsList from "../common/ChipsList";
+
+import BestFolioItem from "./BestFolioItem";
 
 function BestFolioSection() {
   const [bestfolioList, setBestfolioList] = useState([{ name: "", view: -1, like: -1, creativeId: -1, isLike: false }]);

@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { styled } from "styled-components";
 
-import { getProgram } from "../../../apis/Community/getProgram";
-import { ProgramItemProps } from "../../../types/Community/communityProps";
+import { getProgram } from "../../apis/Community/getProgram";
+import { ProgramItemProps } from "../../types/Community/communityProps";
 
 import ProgramItem from "./ProgramItem";
 

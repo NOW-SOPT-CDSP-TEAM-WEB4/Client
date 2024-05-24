@@ -1,5 +1,3 @@
-import React from "react";
-
 import { styled } from "styled-components";
 
 import CommunityArticleItem from "./CommunityArticleItem";
@@ -47,11 +45,10 @@ const TitleText = styled.div`
 
 const CommunityCarouselContainer = styled.section`
   display: flex;
-  flex-shrink: 0;
-
-  margin-bottom: 2rem;
   width: 84.6rem;
   height: 47.6rem;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
 `;
 
 const CommunityArticleSection = styled.article`

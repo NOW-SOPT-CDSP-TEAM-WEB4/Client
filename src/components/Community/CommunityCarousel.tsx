@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 
 import { styled } from "styled-components";
 
-import { IcArrowleftRg, IcArrowrightRg } from "../../../assets";
-import { carouselTemList } from "../../../constants/Community/communityConstants";
-import { CarouselTemProps } from "../../../types/Community/communityProps";
+import { IcArrowleftRg, IcArrowrightRg } from "../../assets";
+import { carouselTemList } from "../../constants/Community/communityConstants";
+import { CarouselTemProps } from "../../types/Community/communityProps";
 
 function CommunityCarousel() {
   const [currIndex, setCurrIndex] = useState(0);

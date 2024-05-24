@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "./components/common/Header/Header";
-import TopNav from "./components/common/TopNav/TopNav";
+import Header from "./components/common/Header";
+import TopNav from "./components/common/TopNav";
 
 function Roots() {
   return (

@@ -3,7 +3,7 @@ import React, { KeyboardEvent, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { IcNew, IcSearch, Logo } from "../../../assets/";
+import { IcNew, IcSearch, Logo } from "../../assets";
 
 function TopNav() {
   const [searchParams] = useSearchParams();

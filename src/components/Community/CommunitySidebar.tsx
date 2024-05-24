@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import { styled } from "styled-components";
 
-import { IcArrowdownSm } from "../../../assets";
-import { navCategory, outLinkCategory, commuityCategory } from "../../../constants/Community/communityConstants";
+import { IcArrowdownSm } from "../../assets";
+import { commuityCategory, navCategory, outLinkCategory } from "../../constants/Community/communityConstants";
 
 import Dropdown from "./Dropdown";
 
@@ -121,7 +121,6 @@ const NavImg = styled.div`
 
 const ToggleBtn = styled(IcArrowdownSm)<{ $toggleOpen: boolean }>`
   position: absolute;
-
   right: 0;
   bottom: 1.9rem;
   transform: ${({ $toggleOpen }) => $toggleOpen && "rotate(180deg)"};

@@ -2,11 +2,11 @@ import { useCallback, useRef, useState } from "react";
 
 import { styled } from "styled-components";
 
-import { IcNextButton } from "../../../assets";
-import { throttle } from "../../../utils/throttle";
+import { IcNextButton } from "../../assets";
+import { ChipsListProps } from "../../types/common/chipsListType";
+import { throttle } from "../../utils/throttle";
 
 import Chip from "./Chip";
-import { ChipsListProps } from "./types/chipsListType";
 
 function ChipsList({ chipsTextList }: ChipsListProps) {
   const [selectedOption, setSelectedOption] = useState("전체");

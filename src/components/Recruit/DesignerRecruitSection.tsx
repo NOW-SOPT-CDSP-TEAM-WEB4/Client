@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 import { chipsTextList, designerRecruitList } from "../../constants/Recruit/recruitConstants";
-import ChipsList from "../common/ChipList/ChipsList";
+import ChipsList from "../common/ChipsList";
 
 import DesignerRecruitItem from "./DesignerRecruitItem";
 

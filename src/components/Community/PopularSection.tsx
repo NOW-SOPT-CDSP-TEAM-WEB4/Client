@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { styled } from "styled-components";
 
-import { getWorkshop } from "../../../apis/Community/getWorkshop";
-import { WorkshopItemProps } from "../../../types/Community/communityProps";
+import { getWorkshop } from "../../apis/Community/getWorkshop";
+import { WorkshopItemProps } from "../../types/Community/communityProps";
 
 import PopularItem from "./PopularItem";
 

@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
-import BestFolioSection from "../../components/Home/BsetFolioSection/BestFolioSection";
+import BestFolioSection from "../../components/Home/BestFolioSection";
 import CarouselContainer from "../../components/Home/CarouselContainer";
-import DesignerRecruitSection from "../../components/Home/DesignerRecruitSection/DesignerRecruitSection";
-import NotefolioRecommendSection from "../../components/Home/NotefolioRecommendSection/NotefolioRecommendSection";
+import DesignerRecruitSection from "../../components/Home/DesignerRecruitSection";
+import NotefolioRecommendSection from "../../components/Home/NotefolioRecommendSection";
 
 function Home() {
   return (

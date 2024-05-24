@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
-import { notefolioRecommendList } from "../../../constants/Home/notefolioConstants";
-import NotefolioRecommendItem from "../NotefolioRecommendItem/NotefolioRecommendItem";
+import { notefolioRecommendList } from "../../constants/Home/notefolioConstants";
+
+import NotefolioRecommendItem from "./NotefolioRecommendItem";
 
 function NotefolioRecommendSection() {
   return (

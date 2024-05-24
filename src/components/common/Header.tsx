@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { IcTopBar, IcSym, IcLogoSim, IcLoud } from "../../../assets/index";
+import { IcLogoSim, IcLoud, IcSym, IcTopBar } from "../../assets/index";
 
 function Header() {
   return (
@@ -35,6 +35,7 @@ const HeaderPageWrapper = styled.header`
 const IcTopBarBackground = styled.div`
   width: 100%;
   height: 4.2rem;
+
   background-color: ${({ theme }) => theme.colors.o02};
 `;
 
@@ -48,6 +49,7 @@ const BottomContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 3.9rem;
+
   background-color: ${({ theme }) => theme.colors.g01};
 `;
 
@@ -65,13 +67,14 @@ const IcSimIcon = styled(IcSym)`
 `;
 
 const LogoBox = styled.div`
-  align-items: center;
+  display: flex;
   height: 3.9rem;
   padding: 1.2rem 1.6rem;
-  display: flex;
+
+  background-color: ${({ theme }) => theme.colors.w01};
+  align-items: center;
   border-right: 0.1rem solid ${({ theme }) => theme.colors.g04};
   border-left: 0.1rem solid ${({ theme }) => theme.colors.g04};
-  background-color: ${({ theme }) => theme.colors.w01};
 `;
 
 const IcLogoSimIcon = styled(IcLogoSim)`

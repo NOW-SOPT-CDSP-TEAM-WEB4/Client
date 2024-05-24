@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 
-import { IcHeart, IcEmptyHeart, IcView, IcGreyHeart } from "../../../assets";
-import { bestfolioIconList } from "../../../constants/Home/homeConstants";
-import { BestFolioHomeItemProps } from "../../../types/Home/homeTypes";
+import { IcEmptyHeart, IcGreyHeart, IcHeart, IcView } from "../../assets";
+import { bestfolioIconList } from "../../constants/Home/homeConstants";
+import { BestFolioHomeItemProps } from "../../types/Home/homeTypes";
 
 function BestFolioItem({ isLike, name, view, like, creativeId, toggleHeart }: BestFolioHomeItemProps) {
   return (
@@ -32,8 +32,8 @@ export default BestFolioItem;
 const BestFolioItemWrapper = styled.div``;
 
 const ImgContainer = styled.section`
-  width: 23rem;
   position: relative;
+  width: 23rem;
 `;
 
 const ImgBestFolio = styled.img`
@@ -73,8 +73,9 @@ const HomeInfoContainer = styled.div`
 `;
 
 const HomeView = styled.h3`
-  color: ${({ theme }) => theme.colors.b05};
   margin-right: 1.8rem;
+
+  color: ${({ theme }) => theme.colors.b05};
 `;
 
 const HomeHeart = styled.h3`

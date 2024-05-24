@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { DesignerRecruitItemProps } from "../../../types/Home/homeTypes";
+import { DesignerRecruitItemProps } from "../../types/Home/homeTypes";
 
 function DesignerRecruitItem({ imgSrc, title, companyLogo, company }: DesignerRecruitItemProps) {
   return (

@@ -1,35 +1,35 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-import { ProgramItemProps } from "../../../types/Community/communityProps";
+import { WorkshopItemProps } from "../../types/Community/communityProps";
 
-function ProgramItem({ id, title, content, date, online }: ProgramItemProps) {
+function PopularItem({ workshopId, title, content, date, online }: WorkshopItemProps) {
   return (
-    <ProgramItemWrapper>
-      <ProgramItemContainer key={id}>
-        <ProgramImg src={`/src/assets/img/img_program_${id}.png`} />
+    <PopularItemWrapper>
+      <PopularItemContainer>
+        <PopularImg src={`/src/assets/img/img_popular_${workshopId}.png`} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>
         <Date>{date}</Date>
-      </ProgramItemContainer>
-    </ProgramItemWrapper>
+      </PopularItemContainer>
+    </PopularItemWrapper>
   );
 }
 
-export default ProgramItem;
+export default PopularItem;
 
-const ProgramItemWrapper = styled.section`
+const PopularItemWrapper = styled.section`
   display: flex;
 `;
 
-const ProgramItemContainer = styled.button`
+const PopularItemContainer = styled.button`
   display: flex;
   flex-direction: column;
 
   padding: 0;
 `;
 
-const ProgramImg = styled.img`
+const PopularImg = styled.img`
   display: flex;
   align-self: stretch;
 
@@ -62,20 +62,17 @@ const Title = styled.div`
   margin-bottom: 1rem;
 
   color: ${({ theme }) => theme.colors.b03};
-
   ${({ theme }) => theme.fonts.Bold16_24};
-
   letter-spacing: -0.05rem;
 `;
 
 const Content = styled.article`
   display: flex;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 
   color: ${({ theme }) => theme.colors.b05};
-
-  ${({ theme }) => theme.fonts.Regular15_24};
+  ${({ theme }) => theme.fonts.Regular15_Auto};
   letter-spacing: -0.025rem;
 `;
 
@@ -83,7 +80,6 @@ const Date = styled.article`
   display: flex;
 
   color: ${({ theme }) => theme.colors.b09};
-
-  ${({ theme }) => theme.fonts.Medium14_22};
+  ${({ theme }) => theme.fonts.Regular14_22};
   letter-spacing: -0.025rem;
 `;

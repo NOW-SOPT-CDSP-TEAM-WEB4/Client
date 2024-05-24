@@ -1,8 +1,7 @@
 import { styled } from "styled-components";
 
-import { IcCheckWhite } from "../../../assets";
-
-import { ChipWrapperProps } from "./types/chipsListType";
+import { IcCheckWhite } from "../../assets";
+import { ChipWrapperProps } from "../../types/common/chipsListType";
 
 function Chip({ buttonText, selectedOption, changeSelectedOption }: ChipWrapperProps) {
   return (

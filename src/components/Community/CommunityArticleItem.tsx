@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { communityArticle } from "../../../constants/Community/communityConstants";
+import { communityArticle } from "../../constants/Community/communityConstants";
 
 function CommunityArticleItem() {
   return (
@@ -29,18 +29,16 @@ const CommunityArticleItemWrapper = styled.section`
 `;
 const CommunityArticleItemContainer = styled.button`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-self: stretch;
-
-  padding: 3.7rem 2.5rem;
 
   /* width, height 100%로 맞추기?... 나중에 확인 */
   /* height: 22.6rem; */
   width: 41.1rem;
-
+  padding: 3.7rem 2.5rem;
   border: 0.1rem solid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
   border-radius: 0.8rem;
   border-color: ${({ theme }) => theme.colors.g03};
 `;
@@ -69,7 +67,6 @@ const Title = styled.div`
   margin-bottom: 0.65rem;
 
   color: ${({ theme }) => theme.colors.b03};
-
   ${({ theme }) => theme.fonts.Bold18_26};
   letter-spacing: -0.05rem;
 `;
@@ -80,15 +77,12 @@ const Content = styled.article`
   margin-bottom: 1rem;
 
   color: ${({ theme }) => theme.colors.b05};
-
   ${({ theme }) => theme.fonts.Regular15_24};
   letter-spacing: -0.025rem;
 `;
 
 const UpdateDate = styled.div`
   color: ${({ theme }) => theme.colors.b07};
-
   ${({ theme }) => theme.fonts.Regular13_Auto};
-
   letter-spacing: -0.025rem;
 `;

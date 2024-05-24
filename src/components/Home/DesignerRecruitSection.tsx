@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
-import { designerRecruitList } from "../../../constants/Home/designerConstants";
-import DesignerRecruitItem from "../DesignerRecruitItem/DesignerRecruitItem";
+import { designerRecruitList } from "../../constants/Home/designerConstants";
+
+import DesignerRecruitItem from "./DesignerRecruitItem";
 
 function DesignerRecruitSection() {
   return (
@@ -20,11 +21,12 @@ export default DesignerRecruitSection;
 
 const DesignerRecruitSectionWrapper = styled.section`
   display: flex;
-  flex-direction: column;
-  margin-top: 4.5rem;
   width: 100%;
+  margin-top: 4.5rem;
   padding: 0 calc((100vw - 124.4rem) / 2);
+
   background-color: ${({ theme }) => theme.colors.b03};
+  flex-direction: column;
 `;
 
 const DesignerRecruitSectionTitle = styled.h2`

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import { IcArrowrightRg } from "../../../assets";
-import { communityNav } from "../../../constants/Community/communityConstants";
+import { IcArrowrightRg } from "../../assets";
+import { communityNav } from "../../constants/Community/communityConstants";
 
 function CommunityNavItem() {
   return (
@@ -74,12 +74,11 @@ const LabelBox = styled.section`
 
 const IcArrowrightRgIcon = styled(IcArrowrightRg)`
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0.35rem 0.5rem;
   width: 1.2rem;
   height: 1.2rem;
+  margin: 0.35rem 0.5rem;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ContentContainer = styled.section`
@@ -91,12 +90,10 @@ const ContentContainer = styled.section`
 
 const Content = styled.article`
   display: flex;
+
   text-align: left;
-
   color: ${({ theme }) => theme.colors.b04};
-
   ${({ theme }) => theme.fonts.Medium14_22};
-
   letter-spacing: -0.025rem;
 `;
 
