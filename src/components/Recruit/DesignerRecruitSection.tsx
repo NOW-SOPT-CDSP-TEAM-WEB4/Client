@@ -11,7 +11,7 @@ function DesignerRecruitSection() {
       <DesignerRecruitSectionTitle>디자인 포지션 채용 공고 💼</DesignerRecruitSectionTitle>
       <ChipsList chipsTextList={chipsTextList} />
       <RecruitCountText>
-        총 <RecruitCount>16</RecruitCount>개의 채용 공고
+        총 <RecruitCount>12</RecruitCount>개의 채용 공고
       </RecruitCountText>
       <DesignerRecruitItemContainer>
         {designerRecruitList.map((item) => (
