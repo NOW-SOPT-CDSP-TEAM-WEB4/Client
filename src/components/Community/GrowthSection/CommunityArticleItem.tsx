@@ -71,6 +71,7 @@ const Title = styled.div`
   color: ${({ theme }) => theme.colors.b03};
 
   ${({ theme }) => theme.fonts.Bold18_26};
+  letter-spacing: -0.05rem;
 `;
 
 const Content = styled.article`
@@ -81,10 +82,13 @@ const Content = styled.article`
   color: ${({ theme }) => theme.colors.b05};
 
   ${({ theme }) => theme.fonts.Regular15_24};
+  letter-spacing: -0.025rem;
 `;
 
 const UpdateDate = styled.div`
   color: ${({ theme }) => theme.colors.b07};
 
   ${({ theme }) => theme.fonts.Regular13_Auto};
+
+  letter-spacing: -0.025rem;
 `;

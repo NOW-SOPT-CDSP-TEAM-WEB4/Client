@@ -53,6 +53,7 @@ const Online = styled.div<{ online: boolean }>`
   background-color: ${({ theme, online }) => (online ? theme.colors.bb03 : theme.colors.gg01)};
 
   ${({ theme }) => theme.fonts.Bold12_16};
+  letter-spacing: -0.025rem;
 `;
 
 const Title = styled.div`
@@ -63,6 +64,7 @@ const Title = styled.div`
   color: ${({ theme }) => theme.colors.b03};
 
   ${({ theme }) => theme.fonts.Bold16_24};
+  letter-spacing: -0.05rem;
 `;
 
 const Content = styled.article`
@@ -73,6 +75,8 @@ const Content = styled.article`
   color: ${({ theme }) => theme.colors.b05};
 
   ${({ theme }) => theme.fonts.Regular15_Auto};
+
+  letter-spacing: -0.025rem;
 `;
 
 const Date = styled.article`
@@ -81,4 +85,5 @@ const Date = styled.article`
   color: ${({ theme }) => theme.colors.b09};
 
   ${({ theme }) => theme.fonts.Regular14_22};
+  letter-spacing: -0.025rem;
 `;
