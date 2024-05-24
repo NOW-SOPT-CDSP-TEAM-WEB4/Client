@@ -3,11 +3,13 @@ import { styled } from "styled-components";
 import { IcGreyHeart, IcView } from "../../assets";
 import { authorIconList } from "../../constants/Result/resultConstants";
 import { SearchResultItemProps } from "../../types/Search/searchTypes";
+import { getImagePath } from "../../utils/getImagePath";
 
 function SearchResultItem({ name, creativeId, view, like }: SearchResultItemProps) {
+  const imagePath = getImagePath("img_search_result", creativeId);
   return (
     <SearchResultItemWrapper>
-      <SearchResultItemImg src={import.meta.env.VITE_DOMAIN + `/src/assets/img/img_search_result_${creativeId}.png`} />
+      <SearchResultItemImg src={imagePath} />
       <SearchResultInfo>
         <AuthorInfo>
           {authorIconList[creativeId - 1]}

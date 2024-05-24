@@ -6,7 +6,7 @@ function PopularItem({ workshopId, title, content, date, online }: WorkshopItemP
   return (
     <PopularItemWrapper>
       <PopularItemContainer>
-        <PopularImg src={import.meta.env.VITE_DOMAIN + `/src/assets/img/img_popular_${workshopId}.png`} />
+        <PopularImg src={`/src/assets/img/img_popular_${workshopId}.png`} />
         <Online online={online}>{online ? "실시간 온라인" : "오프라인"}</Online>
         <Title>{title}</Title>
         <Content>{content}</Content>

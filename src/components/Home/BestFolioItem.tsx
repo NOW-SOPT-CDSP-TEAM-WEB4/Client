@@ -8,7 +8,7 @@ function BestFolioItem({ isLike, name, view, like, creativeId, toggleHeart }: Be
   return (
     <BestFolioItemWrapper>
       <ImgContainer>
-        <ImgBestFolio src={import.meta.env.VITE_DOMAIN + `/src/assets/img/img_bestfolio_home_${creativeId}.png`} />
+        <ImgBestFolio src={`/src/assets/img/img_bestfolio_home_${creativeId}.png`} />
         <HeartIcon onClick={toggleHeart}>{isLike ? <IcHeart /> : <IcEmptyHeart />}</HeartIcon>
       </ImgContainer>
       <HomeUnderContainer>

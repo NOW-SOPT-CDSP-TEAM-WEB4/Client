@@ -36,7 +36,7 @@ function PopularSection() {
           <PopularItem key={item.workshopId} {...item} />
         ))}
       </PopularContainer>
-      <BottomImg src={import.meta.env.VITE_DOMAIN + "/src/assets/img/img_popular_bottom.png"} />
+      <BottomImg src={"/src/assets/img/img_popular_bottom.png"} />
     </PopularSectionWrapper>
   );
 }

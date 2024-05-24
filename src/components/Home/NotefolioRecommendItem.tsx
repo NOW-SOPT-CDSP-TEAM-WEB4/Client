@@ -14,7 +14,7 @@ function NotefolioRecommendItem({ imgSrc, companyLogo, company, content }: Notef
       </NotefolioRecommendItemTopContainer>
       <ImgContainer>
         {imgSrc.map((src, index) => (
-          <ImgNotefolioRecommend key={index} src={import.meta.env.VITE_DOMAIN + src} alt={`img-${index}`} />
+          <ImgNotefolioRecommend key={index} src={src} alt={`img-${index}`} />
         ))}
       </ImgContainer>
     </NotefolioRecommendItemWrapper>
