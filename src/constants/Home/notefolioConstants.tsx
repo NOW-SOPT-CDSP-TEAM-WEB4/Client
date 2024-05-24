@@ -2,6 +2,9 @@ import { IcJaein, IcKush, IcMozza, IcPindit, IcStudioKio } from "../../assets";
 import ImgJaein1 from "../../assets/img/img_jaein_1.png";
 import ImgJaein2 from "../../assets/img/img_jaein_2.png";
 import ImgJaein3 from "../../assets/img/img_jaein_3.png";
+import ImgKio1 from "../../assets/img/img_kio_1.png";
+import ImgKio2 from "../../assets/img/img_kio_2.png";
+import ImgKio3 from "../../assets/img/img_kio_3.png";
 import ImgKush1 from "../../assets/img/img_KUSH_1.png";
 import ImgKush2 from "../../assets/img/img_KUSH_2.png";
 import ImgKush3 from "../../assets/img/img_KUSH_3.png";
@@ -15,7 +18,7 @@ import ImgPindit3 from "../../assets/img/img_pindit_3.png";
 export const notefolioRecommendList = [
   {
     id: 0,
-    imgSrc: ["/src/assets/img/img_kio_1.png", "/src/assets/img/img_kio_2.png", "/src/assets/img/img_kio_3.png"],
+    imgSrc: [ImgKio1, ImgKio2, ImgKio3],
     companyLogo: <IcStudioKio />,
     company: "StudioKio",
   },
