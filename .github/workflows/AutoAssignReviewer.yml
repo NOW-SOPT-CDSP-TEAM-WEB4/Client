@@ -13,4 +13,4 @@ jobs:
           assignees: ${{ github.actor }} 
           reviewers: jungwoo3490, KIMGEONHWI, sinji2102
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}
