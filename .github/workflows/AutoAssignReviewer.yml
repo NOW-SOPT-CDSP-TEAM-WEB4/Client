@@ -12,4 +12,4 @@ jobs:
         with:
           assignees: ${{ github.actor }} 
           reviewers: jungwoo3490, KIMGEONHWI, sinji2102
-          repo-token: ${{ secrets.TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
