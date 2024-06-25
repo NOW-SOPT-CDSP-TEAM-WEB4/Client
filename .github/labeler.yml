@@ -35,9 +35,9 @@ labels:
   ':blue_book: documentation':
     include:
       - '\bdocs\b'
-  ':package: Chore':
+  ':package: chore':
     include:
-      - '\bchore\b'
+      - '\bChore\b'
   ':framed_picture: design':
     include:
       - '\bdesign\b'
