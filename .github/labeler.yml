@@ -2,21 +2,13 @@
 
 # enable labeler on issues, prs, or both.
 enable:
-  issues: true
+  issues: false
   prs: true
 # comments object allows you to specify a different message for issues and prs
 
 comments:
-  issues: |
-    Thanks for opening this issue!
-    I have applied any labels matching special text in your title and description.
-
-    Please review the labels and make any necessary changes.
   prs: |
-    Thanks for the contribution!
-    I have applied any labels matching special text in your title and description.
-
-    Please review the labels and make any necessary changes.
+    PR 작성하느라 고생 많았어요!! 라벨 잘 지정되었는지 확인 한 번 해 주기 🫶
 
 # Labels is an object where:
 # - keys are labels
@@ -28,24 +20,24 @@ comments:
 labels:
   ':bug: bug':
     include:
-      - '\bbug\b'
+      - '\bBug\b'
   ':sparkles: feature':
     include:
-      - '\bfeature\b'
+      - '\bFeature\b'
   ':blue_book: documentation':
     include:
-      - '\bdocs\b'
+      - '\bDocs\b'
   ':package: chore':
     include:
       - '\bChore\b'
   ':framed_picture: design':
     include:
-      - '\bdesign\b'
+      - '\bDesign\b'
   ':test_tube: test':
     include:
-      - '\btest\b'
+      - '\bTest\b'
   ':toolbox: refactor':
     include:
-      - '\brefactor\b'
+      - '\bRefactor\b'
   ':package: ci/cd':
-    include: ['\bci\/cd\b', '\bci\b', '\bcd\b']
+    include: ['\bCI\/CD\b', '\bCI\b', '\bCD\b']
